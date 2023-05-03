@@ -1,0 +1,1053 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1036{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f1\fswiss\fcharset0\fprq2{\*\panose 020b0604020202020204}Arial;}
+{\f2\fmodern\fcharset0\fprq1{\*\panose 02070309020205020404}Courier New;}{\f3\froman\fcharset2\fprq2{\*\panose 05050102010706020507}Symbol;}{\f4\froman\fcharset0\fprq2{\*\panose 00000000000000000000}Times;}
+{\f5\fswiss\fcharset0\fprq2{\*\panose 00000000000000000000}Helvetica;}{\f6\fmodern\fcharset0\fprq1{\*\panose 00000000000000000000}Courier;}{\f7\fswiss\fcharset0\fprq2{\*\panose 00000000000000000000}Geneva;}
+{\f8\froman\fcharset0\fprq2{\*\panose 00000000000000000000}Tms Rmn;}{\f9\fswiss\fcharset0\fprq2{\*\panose 00000000000000000000}Helv;}{\f10\froman\fcharset0\fprq2{\*\panose 00000000000000000000}MS Serif;}
+{\f11\fswiss\fcharset0\fprq2{\*\panose 00000000000000000000}MS Sans Serif;}{\f12\froman\fcharset0\fprq2{\*\panose 00000000000000000000}New York;}{\f13\fswiss\fcharset0\fprq2{\*\panose 00000000000000000000}System;}
+{\f14\fnil\fcharset2\fprq2{\*\panose 05000000000000000000}Wingdings;}{\f15\fswiss\fcharset0\fprq3{\*\panose 00000000000000000000}Tahoma;}{\f16\fscript\fcharset0\fprq2{\*\panose 030f0702030302020204}Comic Sans MS;}}{\colortbl;\red0\green0\blue0;
+\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;
+\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{\nowidctlpar\widctlpar\adjustright \fs20\lang1036\cgrid \snext0 Normal;}{\s1\fi709\keepn\nowidctlpar\adjustright \cf1\lang1036\cgrid 
+\sbasedon0 \snext0 heading 1;}{\s2\qc\keepn\nowidctlpar\adjustright \b\cf1\lang1036\cgrid \sbasedon0 \snext0 heading 2;}{\*\cs10 \additive Default Paragraph Font;}{\*\cs15 \additive \sbasedon10 page number;}{\s16\nowidctlpar
+\tqc\tx4536\tqr\tx9072\adjustright \fs20\lang1036\cgrid \sbasedon0 \snext16 header;}}{\info{\title LA SOURIS}{\author altar}{\operator MERCIER}{\creatim\yr1997\mo6\dy13\hr20\min46}{\revtim\yr1997\mo6\dy13\hr20\min46}{\version2}{\edmins0}{\nofpages9}
+{\nofwords4970}{\nofchars28329}{\*\company EN}{\nofcharsws34790}{\vern73}}\paperw11906\paperh16838\margl1417\margr1417\margt1417\margb1417 \deftab708\widowctrl\ftnbj\aenddoc\hyphhotz425\lytprtmet\formshade\viewkind1\viewscale100\pgbrdrhead\pgbrdrfoot 
+\fet0\sectd \pgnrestart\linex0\headery709\footery709\colsx709\endnhere\sectdefaultcl {\header \pard\plain \nowidctlpar\widctlpar\brdrb\brdrs\brdrw60\brsp20\brdrcf2 \adjustright \fs20\lang1036\cgrid {\fs24 
+Programmation de la souris en C et Assembleur en ligne
+\par }\pard\plain \s16\nowidctlpar\tqc\tx4536\tqr\tx9072\adjustright \fs20\lang1036\cgrid {
+\par }}{\footer \pard\plain \nowidctlpar\widctlpar\brdrt\brdrs\brdrw60\brsp20\brdrcf2 \tx9072\adjustright \fs20\lang1036\cgrid {Par Altar : E-MAIL: altar@neuronnexion.fr
+\par }\pard \nowidctlpar\widctlpar\adjustright {\tab    WWW   : http://www.neuronnexion.fr/~altar/main.htm}{\fs24   \tab \tab \tab \tab       Page  }{\field{\*\fldinst {\cs15  PAGE }}{\fldrslt {\cs15\lang1024 1}}}{\fs24 
+\par }}{\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang{\pntxta )}}
+{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8
+\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \nowidctlpar\widctlpar\adjustright \fs20\lang1036\cgrid {\fs24 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\fs48 LA SOURIS
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\fs48\lang1024 
+\par }\pard \qc\nowidctlpar\widctlpar\pvpara\posx1894\posy670\absh2028\absw5040\dxfrtext141\dfrmtxtx141\dfrmtxty0\adjustright {\lang1024 {\pict\wmetafile8\picw18583\pich7475\picwgoal10535\pichgoal4238 \picscalex48\picscaley48 
+010009000003380900000400f80000000000030000001e000e00000026060f001200ffffffff00000800000090f7cbfc06086a030a00000026060f000a00ffffffff0200000000001700000026060f002400ffffffff04001a000000544e505014004d6963726f736f667420506f776572506f696e740b00000026060f000c
+00544e505000000200000050000a00000026060f000a00ffffffff0300000000000e00000026060f001200544e50500400080000000100010000000000050000000b02cbfc90f7050000000c029f06761037000000f700000319000000000080808000c0c0c000e0e0e000ffffff0000000000800000000080000080800000
+000080008000800000808000c0c0c000c0dcc000a6caf000fffbf000a0a0a40080808000ff00000000ff0000ffff00000000ff00ff00ff0000ffff00ffffff0004000000340200000300000035000e00000026060f001200ffffffff0000080000003efe55ffb201bc000e00000026060f001200ffffffff000008000000a6
+fc1e00f207660307000000fc020000000000020000040000002d01010008000000fa02050000000000ffffff00040000002d0102004c00000024032400aafc8601a6fca501adfcb801bdfcc901d7fcd901fcfce4012afdef0164fdfb01c3fd0b0246fe2102d8fe3e02c7ff7102710094023501b5023902e60215030e03f103
+3903f5046003430564038f056603db055f031b06530377063903cc0610030707e8024607af0299075702b3073102c9070d02de07e001ea07ba01f2078f01f2076401e807340169ff1e00cefc33010a00000026060f000a00ffffffff0100000000000e00000026060f001200ffffffff00000800000099fdbafd160027fe07
+000000fc020000808080020000040000002d01030004000000f00101000e00000024030500aefd0cfe99fd27fe0c00e7fd1600dafdf6febafd0a00000026060f000a00ffffffff0100000000000e00000026060f001200ffffffff00000800000057fcf8fff807400307000000fc020000c0c0c0020000040000002d010100
+04000000f0010300560000002403290057fc650059fc84005efca40062fcc2006afce10071fcfd0079fc1b0185fc3f01a1fc7901b5fc9601cffcac01f2fcbe010efdc6015afdd501bafde5013cfefb01cefe1802bdff4b0268006e022c018f022f02c0020c03e802e8031303ec043a0339053e0385054003d105390311062d
+036d061303c306ea02fd06c2023c07890290073102aa070b02bf07e701d507ba01e0079401ec076901f3073c01f80711015efff8ff0a00000026060f000a00ffffffff0100000000000e00000026060f001200ffffffff00000800000056fc3b00f8070b0207000000fc020000808080020000040000002d01030004000000
+f0010100f800000024037a0056fc620058fc7d0061fc8f006bfc990079fca00086fca20093fca3009ffca300adfca200bdfc9e00cefc9b00e3fc9700fcfc920011fd8e0029fd89003ffd860050fd830061fd810074fd7f008efd7c00acfd7a00cafd7800ebfd74000afe72002cfe70004efe6e0073fe6c0094fe6b00b4fe6b
+00d1fe6a00f3fe6a0014ff690034ff69004fff690066ff6b0081ff6c009bff6f00afff7100c0ff7400d2ff7600e5ff7800faff7c0010007f0026008300380086004c00890066008e007f00920096009600b0009a00cc009f00e500a400fc00a9001d01af003301b3005101b8006d01bf008e01c500af01cb00cf01d200e701
+d600ff01dc001e02e3003902e9005902f0007302f7008d02fe00a6020701bc020d01d0021401e2021a01f50220010703260117032b012a0332013c0339014b03400162034901780353018f035c01ae036901c7037301ea038301120493013f04a3016904b2019904c101c404d001f304de011c05ea013d05f2016205fa018a
+050202b4050702e2050a0213060b024c060a02780606029b060202c206fb01e706f1010b07e6013007d9015107cb016a07bd018507ae01a2079c01bb078c01d1077801e0075f01ed074601f5072c01f8071501ae077601c706dd012006df010502c30019018f0052ff3e007efe3b0064fd560072fc74000a00000026060f00
+0a00ffffffff0100000000000e00000026060f001200ffffffff00000800000082fed2fc040160001a00000024030b00bffe5f00dcfe6000edfee7ff4fff3dff3a00f0fd0401d2fce800d2fcba00ecfce7fffcfdbbfe9dff82fef1ff0a00000026060f000a00ffffffff0100000000000e00000026060f001200ffffffff00
+000800000092f782fe1dfdf0ff3800000024031a001dfdc8fe8cfc9cfe20fc89feb0fb82fe57fb82feecfa89fe9afa95fe28fab5fe97f9edfeedf82cff69f859ff0af872ff92f78bff92f7f0fff1f7e9ff49f8d0ffc7f8a4ff51f972ffe3f939ff87fa06fffffaedfe64fbe7fee1fbe8fe40fcf6feb2fc13ffdefc26ff0a00
+000026060f000a00ffffffff0100000000000e00000026060f001200ffffffff000008000000a8fdd2fcef0011fe07000000fc020000e0e0e0020000040000002d01010004000000f00103005200000024032700ef00d2fcd300f1fcbb000cfda60026fd8c0044fd77005ffd640077fd4d0094fd3900aefd2600c4fd1700db
+fd0700d9fdeeffd8fdcaffd5fda9ffd4fd87ffd4fd5dffd5fd37ffd7fd0bffdafde9fedefdc4fee3fd9ffee8fd7afeedfd4bfef4fd26fefafdfbfd00fea8fd11fe6cfe43fd7efe36fd8ffe2afda4fe1ffdb2fe19fdd8fe0ffdfefe06fd31fffcfc78fff0fce2ffe0fc3f00d7fca300d2fc0a00000026060f000a00ffffffff
+0100000000000e00000026060f001200ffffffff000008000000cdfe4aff040800029600000024034900eefeaeffdefec2ffd7fed3ffd1fee7ffcefef8ffcdfe0600cdfe1b00cffe3400d1fe4d00d4fe6200e6fe6100fbfe600010ff600023ff600037ff5f0049ff5f0067ff6100a3ff6700e4ff6f001f0077006200820093
+008c00c7009500fc009f002801a8006201b4009501be00d201ca002e02dd008d02f400de020f012a0329017a034a01b5036101e903770120048c0152049f017b04ae019604b601dd04ce012905e1017005f201b005fb01f40500022f0600027806fb019806f701bb06f201dd06ea01ff06df012207d2014407c5016707b401
+7f07a601aa078c01c3077801d1076901dd075801e5074a01ef073301f7071901fb070301ff07ed000408be0004088a0004085f0002082b00fd070200f307d6ffe507a6ffd90785ffb8074aff51ff66ff0a00000026060f000a00ffffffff0100000000000e00000026060f001200ffffffff00000800000054fcb8ffd6fe98
+004e000000240325006dfcc5ff63fcdeff5bfcf9ff57fc120054fc2b0054fc440054fc570059fc6f0060fc7e0067fc870071fc8f007bfc94008bfc9800a4fc9800cafc9000f2fc890025fd800057fd79007ffd7400a9fd7000d8fd6b0004fe68002efe650057fe63006efe620082fe610095fe6000acfe6000c6fe6000c3fe
+4900c0fe2a00bffe1600bffe0100bffeefffc2feddffcafecbffd6feb8ff0a00000026060f000a00ffffffff0100000000000e00000026060f001200ffffffff00000800000058fcb9ffd6fe2d0007000000fc020000ffffff020000040000002d01030004000000f00101004200000024031f006cfcc8ff68fccfff63fcda
+ff5ffce7ff5bfcf5ff59fc010058fc0b005ffc180066fc200077fc29008ffc2d00aafc2d00cffc2a00f8fc26002afd20005dfd1a008cfd1500b7fd1000e3fd0c0010fe080037fe030059fefeff71fefcff87fef9ff9efef7ffaefef5ffbffef5ffc1fee9ffc4fedeffc8fed3ffd6feb9ff0a00000026060f000a00ffffffff
+0100000000000e00000026060f001200ffffffff00000800000068fce0fd0e00efff07000000fc020000e0e0e0020000040000002d01010004000000f00103006000000024032e000e00e7fd22ff40ff13ff58ff04ff6ffff3fe8affe1fea6ffd7feb6ffd2febfffaafec2ff85fec5ff60fec9ff36feceff04fed3ffd3fdd8
+ffa4fdddff70fde2ff3cfde6ff06fdebffd4fcefffb1fcefff94fceaff7dfce4ff6dfcd9ff68fccdff8efc7bffbbfc3affeafcf7fe15fdbefe42fd88fe73fd53fe9dfd1efeccfd14fefafd0bfe26fe04fe4afefffd6dfefafd8efef5fdb0fef0fdd5feecfd00ffe7fd2affe3fd55ffe2fd7bffe0fda4ffe0fdcaffe1fdf0ff
+e3fd0a00000026060f000a00ffffffff0100000000000e00000026060f001200ffffffff0000080000006efce0ff61fe13004a000000240323006efcf0ff7afcfdff84fc030090fc07009ffc0900b0fc0a00d1fc0700e8fc060018fd01005afdf9ff7efdf5ffa4fdf1ffcdfdedfffafde8ff12fee6ff2dfee3ff4cfee0ff61
+fee1ff60fee6ff53fee6ff24feebfffdfdeeffdffdf2ffb9fdf7ff8ffdfcff6ffdffff3efd05000efd0900edfc0c00bffc1100a1fc130090fc120082fc0e007afc070072fc00000a00000026060f000a00ffffffff0100000000000e00000026060f001200ffffffff0000080000009bfde7fddeff38fe07000000fc020000
+808080020000040000002d01030004000000f00101002e00000024031500b0fd1dfe9bfd32fea7fd38fe49fe16fefefe01fe59fffefdb1ff00fecbff01fedeffe9fdbdffe8fd8dffe7fd60ffe7fd39ffe9fd00ffedfddffef1fdb0fef6fd77fefcfd41fe05fe16fe0cfee9fd14febffd1dfe0a00000026060f000a00ffffff
+ff0100000000000e00000026060f001200ffffffff0000080000009dfde7fde0ff3efe07000000fc020000ffffff020000040000002d01010004000000f001030044000000240320005dff03fe83ff03fea8ff06fecbff0afee0fff3fddeffe7fdcbfffdfdacfffafd84fff8fd60fff8fd40fff8fd1cfffafdf7fefcfdccfe
+01fe9ffe07fe79fe0cfe47fe13fe1bfe1afef8fd21fee0fd26febafd2cfe9dfd32fea2fd3efed6fd33fe06fe2afe35fe22fe5ffe1dfe8afe15febdfe11fee6fe0cfe13ff07fe3bff05fe0a00000026060f000a00ffffffff0100000000000e00000026060f001200ffffffff000008000000cefe74ffb10281003600000024
+031900cefef3ff12ffecff36ffebff59ffecff83ffeeffa3fff1ffc2fff5ff0100fcff3400030079000d00bb001900fb00250034012e006701380089013e00f301560059026b00b1028100840217005a0074ff25ff90ffe0febcffdbfec7ffd6fed5ffd1fee4ff0a00000026060f000a00ffffffff0100000000000e000000
+26060f001200ffffffff00000800000086021200ab068a012600000024031100af028000f60295003d03b0007503c700b403e2002b04170192043e01100568016b057d01bc058701f70589012d068a0169068401ab067b016c06120105045e00860212000a00000026060f000a00ffffffff0100000000000e00000026060f
+001200ffffffff000008000000850659fff9077c013400000024031800ab067c01e2067001090763012d0754014b07470171073101a8070701c707e300da07c300e607a800ef078b00f5076b00f8074d00f9073400f7071400f307eeffea07c9ffe007a6ffd30780ffbf0759ffb00768ffab07dfff4f07c30085063d010a00
+000026060f000a00ffffffff0100000000000e00000026060f001200ffffffff000008000000e0fecdfced07620107000000fc020000e0e0e0020000040000002d01030004000000f0010100dc00000024036c00fe00d2fcec00e9fcdb00fafcc80011fdb60027fda3003dfd900054fd7c006efd65008bfd5400a0fd4400b6
+fd3900c4fd2a00d7fd1b00eafd1000f8fd070007fef9ff1afeedff2cfee1ff3efed5ff50fec8ff63feb7ff7afea9ff8dfe9dff9ffe91ffaffe86ffc0fe79ffd3fe6bffe7fe5efffbfe50ff0dff45ff1cff3aff2dff2fff3fff24ff4eff1aff60ff0fff70ff03ff84fff6fe98ffebfea9ffe0febcff01ffb7ff25ffb5ff3fff
+b5ff58ffb5ff79ffb7ff9bffbaffbaffbeffd9ffc1fff4ffc5ff2400cbff6400d5ffb200e6ff0801f5ff6b010800cd011f002002320073024400bf0257000b036e0059038b00c603b6001d04de0073040201c80421012e0542017a055001d5055e013506620193065901da064b011a0736013e0725015a0716017707030195
+07ed00ac07d500bf07be00cd07a600da078900e3076b00e8074a00ed071200e407cbffd20784ffb80746ff95070dff6f07e0fe4907b5fe1a0786fedc0656fea3062efe4e06fcfd0006dafda205b3fd450592fde10473fd740452fd21043afdc00320fd75030dfd2903fffcd102eefc7502e0fc3002d7fcf401d3fc9b01cffc
+5d01cdfc2701d0fc0a00000026060f000a00ffffffff0100000000000a00000026060f000a00ffffffff0100000000000e00000026060f001200544e505004000800000000000000000000000a00000026060f000a00ffffffff010000000000040000002d01020007000000fc020100000000000000040000002d01010004
+000000f0010300040000002701ffff03000000000000ffff3886c916000075698a86ce1600}}{\fs48\lang1024 
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\fs48 
+\par 
+\par 
+\par }{\fs24 
+\par }{\fs32 
+\par 
+\par 
+\par 
+\par Comment programmer l'un des p\'e9riph\'e9riques les plus utilis\'e9s ?
+\par }{\fs24 (Derni\'e8re modification le 04/06/97)
+\par 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\b\fs24 
+\par }{\b\fs40 SOMMAIRE
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\b\f16\fs24 
+\par 
+\par 
+\par }\trowd \trgaph70\trleft-70 \clvertalt\cltxlrtb \cellx8080\clvertalt\cltxlrtb \cellx9142\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Introduction...................................................................................
+..............................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 3\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\trowd \trgaph70\trleft-70 \clvertalt\cltxlrtb \cellx8080\clvertalt\cltxlrtb 
+\cellx9142\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 00h - Etat et r\'e9initialisation de la souris.......................................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 4\cell 
+}\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 01h - Affichage du pointeur de la souris......................................................\cell }\pard 
+\qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 5\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 
+Fonction 02h - Masquage du pointeur de la souris.....................................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 5\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 03h - Etat des boutons et position de la souris.............................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 5\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 04h - Positionnement du pointeur de la souris.............................................\cell }\pard 
+\qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 6\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 05h - Etat des boutons de la souris (enfonc\'e9
+)..............................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 6\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 
+Fonction 06h - Etat des boutons de la souris (rel\'e2ch\'e9)................................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 7\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 07h - Valeur maximal et minimale de colonne............................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 7\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 08h - Valeur maximal et minimal de ligne...................................................\cell }\pard 
+\qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 8\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 
+Fonction 09h - Forme du pointeur graphique..............................................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 8\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 0Ah - Forme du pointeur texte.....................................................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 9\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 0Bh - Lecture du compteur de d\'e9placements de la souris............................\cell }\pard 
+\qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 9\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 0Ch - D\'e9
+finition des masques et adresses d'interruption.............................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 10\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 0Dh - Activation de l'\'e9mulation du crayon optique.....................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 11\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 0Eh - D\'e9sactivation de l'\'e9mulation du crayon optique.................................\cell }\pard 
+\qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 11\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 0Fh - D\'e9
+finition du rapport mickeys/pixels.................................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 12\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 10h - D\'e9sactivation conditionnelle de l'affichage du pointeur de souris.....\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 12\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 13h - Point de d\'e9part pour la double vitesse................................................\cell }\pard 
+\qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 13\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 14h - Lecture et modification des masques et des adre
+sses d'interruption...\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 13\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 15h - Taille du tampon pour l'
+\'e9tat du gestionnaire de la souris...................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 14\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 
+Fonction 16h - Enregistrement de l'\'e9tat du gestionnaire de souris..............................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 15\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 17h - Restaurer l'\'e9tat du gestionnaire de souris............................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 15\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 18h - Masque et adresses d'interruption \'e9tendus..........................................\cell }\pard 
+\qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 15\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 19h - Lecture d'adresses d'interruption \'e9tendu
+es..........................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 17\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 
+Fonction 1Ah - Modification de la sensibilit\'e9 de la souris..........................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 18\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 1Bh - Lecture de la sensibilit\'e9 de la souris..................................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 18\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 1Ch - Fr\'e9quence d'interruption de la souris.................................................\cell }\pard 
+\qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 19\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 1Dh - D\'e9finition du num\'e9ro de la page \'e9
+cran..............................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 19\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 
+Fonction 1Eh - Lecture du num\'e9ro de la page \'e9cran...................................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 19\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 1Fh - D\'e9sactiver le gestionnaire de souris...................................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 20\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 20h - Activer le gestionnaire de souris.........................................................\cell }\pard 
+\qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 20\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 21h - R\'e9
+initialisation logicielle....................................................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 20\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 22h - Langue utilis\'e9e....................................................................................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 21\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 23h - Lecture des num\'e9ro des langues.........................................................\cell }\pard 
+\qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 22\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\trowd \trgaph70\trleft-70 \clvertalt\cltxlrtb \cellx8080\clvertalt\cltxlrtb \cellx9142\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Fonction 24h - Obtention d'informations concernant la configuration.......................\cell }\pard \qr\nowidctlpar\widctlpar\intbl\adjustright {\fs24 Page 23\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24 \row }\pard \nowidctlpar\widctlpar\adjustright {\b\fs24 
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\b\f16\fs24 
+\par }\pard \qc\nowidctlpar\widctlpar\adjustright {\b\f16\fs24 
+\par 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\fs24\ul Introduction : 
+\par }{\fs24 
+\par 
+\par 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24 \tab Cette documentation n'a pas la pr\'e9tention d'\'eatre compl\'e8
+te, il manque certainement des choses, et il est certainement possible d'optimiser les sources. Mais si une personne rencontre ces probl\'e8mes quelle n'h\'e9site surtout pas \'e0 m'en faire part.
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24 
+\par 
+\par 
+\par 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\i\fs32\cf1 L'interruption }{\i\fs32\cf1 33h - Gestion de la souris 
+\par }{\f1\fs18\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 l'interruption 33h sert d'interface avec le gestionnaire de la souris. Les param\'e8tres}{\b\fs24\cf1  }{\fs24\cf1 n\'e9cessaires \'e0}{\b\fs24\cf1  }{\fs24\cf1 la fonction sont transmis via}{
+\b\fs24\cf1  }{\fs24\cf1 les registres du processeur. 
+\par }{\b\fs24\cf1 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\fs24\cf1 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \adjustright {\b\i\fs24\cf1 Fonction 00h - }{\i\fs24\cf1 Etat et r\'e9initialisation de la souris 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\i\fs24\cf1 
+\par }\pard\plain \s1\fi709\keepn\nowidctlpar\outlinelevel0\adjustright \cf1\lang1036\cgrid {Entr\'e9es  :  AX = 00h 
+\par }\pard\plain \fi709\nowidctlpar\widctlpar\adjustright \fs20\lang1036\cgrid {\fs24\cf1 Sorties   :  AX = Etat 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1  \tab \tab      BX = Nombre de boutons 
+\par 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction retourne l'\'e9tat actuel de la souris (\'e9tat mat\'e9riel et logiciel). 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Le code d'\'e9tat indique si une souris est install\'e9e. S'il est \'e9gal \'e0 FFFFh, une souris est install\'e9e ; par contre, s'il est \'e9gal \'e0 0000h, aucune souris n'est install\'e9e. 
+\par 
+\par * La valeur retourn\'e9e dans le registre BX repr\'e9sente le nombre de boutons dont est dot\'e9e la souris. 
+\par 
+\par * Si une souris est connect\'e9e, cette fonction initialise l'interface. Les valeurs standard pr\'e9sent\'e9es au Tableau Fig.1 sont alors appliqu\'e9es. 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\fs24\cf1 
+\par 
+\par }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx4536\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Param\'e8tre\cell }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Valeur standard\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr
+\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx4536\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb
+\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Position\cell Centre de l'\'e9cran \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Indicateur du curseur\cell FFFFh (curseur d\'e9sactiv\'e9) \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Curseur graphiq
+ue\cell fl\'e8che \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Curseur texte\cell Rectangle \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Masque d'interruption\cell 0000h (aucune interruption) \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Crayon optique
+\cell Pas d'\'e9mulation \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Rapport horizontal\cell 8 sur 8 \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 
+\row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Rapport vertical\cell l6 sur 8 \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Vitesse double\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 16 mickeys par seconde \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Valeur minimale de colonne\cell 0000h \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Valeur minimale de ligne\cell 0000h \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Valeur maximale de colonne\cell Valeur X maximale - l \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 
+Valeur maximale de ligne\cell Valeur Y maximale - l \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh
+\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx4536\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Num\'e9ro de page\cell 00h \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\adjustright {\i\fs24\cf1 
+\par Tableau Fig.1 : Les valeurs de r\'e9glage standard de}{\fs24\cf1  }{\i\fs24\cf1 la souris.}{\fs24\cf1  
+\par }{\b\fs24\cf1 
+\par }\pard \nowidctlpar\widctlpar\tx489\adjustright {\b\fs18\cf1 
+\par }\pard \nowidctlpar\widctlpar\tx489\adjustright {\b\fs18\cf1 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \adjustright {\b\i\fs24\cf1 Fonction 01H}{\i\fs24\cf1  - Affichage du pointeur de la souris
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es  : AX = 01h 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties   : Aucune 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction permet d'activer le pointeur de souris en cours et de l'afficher \'e0 l'\'e9cran. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Une fois l'affichage du pointeur activ\'e9, la souris se d\'e9place conform\'e9ment aux param\'e8tres actuellement d\'e9finis. 
+\par 
+\par * Si cette fonction est appel\'e9e alors que l'affichage du pointeur de la souris est d\'e9j\'e0 activ\'e9, elle reste sans effet. 
+\par }\pard \nowidctlpar\widctlpar\tx9067\adjustright {\b\i\fs24\cf1 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \tx9067\adjustright {\b\i\fs24\cf1 Fonction 02h - }{\i\fs24\cf1 Masquage du pointeur de la souris}{\b\i\fs24\cf1  
+\par }\pard \nowidctlpar\widctlpar\tx9542\adjustright {\b\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es  : AX = 02h 
+\par Sortie     : Aucune 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction permet de d\'e9sactiver le pointeur de souris.
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Une fois l'affichage du pointeur d\'e9sactiv\'e9, les mouvements imprim\'e9s \'e0 la souris ne sont plus pris en compte. 
+\par 
+\par * Si cette fonction est appel\'e9e alors que l'affichage du pointeur de la souris est d\'e9j\'e0 d\'e9sactiv\'e9, elle reste sans effet. 
+\par 
+\par * Le pointeur de la souris doit toujours \'eatre d\'e9sactiv\'e9 \'e0 l'aide de cette fonction avant tout changement de mode vid\'e9o. }{\i\cf1 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\i\fs24\cf1 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \adjustright {\b\i\fs24\cf1 Fonction 03h - }{\i\fs24\cf1 Etat des boutons et position de la souris 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\i\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es  : AX = 03h 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties   : BX = Etat des boutons de la souris 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1     CX = Colonne occup\'e9e actuellement par le curseur 
+\par }\pard \li1418\nowidctlpar\widctlpar\adjustright {\fs24\cf1     DX = Ligne occup\'e9e actuellement par le curseur 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * A chaque bouton de la souris correspond un bit dont la valeur refl\'e8te l'\'e9tat : le bit 0 correspond au bouton gauche, le bit l au bouton droit. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Lorsqu'un bit est \'e9gal \'e0 1, le bouton auquel il correspond est enfonc\'e9. Par contre, s'il est \'e9gal \'e0 0, le bouton est rel\'e2ch\'e9. 
+\par * Les registres CX et DX Indiquent la position du curseur de la souris sur l'\'e9cran. Les coordonn\'e9es sp\'e9cifi\'e9es sont celles de l'\'e9cran virtuel 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \adjustright {\b\i\fs24\cf1 Fonction 04h }{\i\fs24\cf1 - Positionnement du pointeur de la souris}{\b\i\fs24\cf1  
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\i\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es :  AX = 04h 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 \tab \tab     CX = Colonne 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 \tab     DX = Ligne 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties  :  Aucune 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction positionne le curseur de la souris \'e0}{\i\fs24\cf1  }{\fs24\cf1 un emplacement particulier de l'\'e9cran. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Les registres CX et DX sp\'e9cifient la position du curseur de la souris sur l'\'e9cran. Les coordonn\'e9es sp\'e9cifi\'e9es sont celles de l'\'e9cran virtuel. 
+\par 
+\par 
+\par }{\b\fs24\cf1 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \tx619\adjustright {\b\i\fs24\cf1 Fonction 05h}{\i\fs24\cf1  - Etat des boutons de la souris (enfonc\'e9) 
+\par }\pard \nowidctlpar\widctlpar\tx1022\adjustright {\i\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9e  : AX = 05h 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1   BX = Bouton de la souris 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties : AX = Etat 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1   BX = Compteur 
+\par   CX = Colonne occup\'e9e par le curseur lorsque le bouton a \'e9t\'e9 enfonc\'e9 pour la 
+\par }\pard \fi709\li1418\nowidctlpar\widctlpar\adjustright {\fs24\cf1 derni\'e8re fois 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1   DX = Ligne occup\'e9e par le curseur lorsque le bouton a \'e9t\'e9 enfonc\'e9 pour la 
+\par }\pard \fi709\li1418\nowidctlpar\widctlpar\adjustright {\fs24\cf1 derni\'e8re fois 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Vous devez sp\'e9cifier dans le registre BX sur quel bouton la fonction doit porter. Si vous sp\'e9cifiez la valeur 00h, II s'agira du bouton gauche. Si vous sp\'e9
+cifiez la valeur 0lh, il s'agira du bouton droit. 
+\par 
+\par * Au retour de la fonction, vous pouvez savoir en consultant le registre AX si le bouton de la souris est enfonc\'e9 (AX = 0lh) ou rel\'e2ch\'e9 (AX = 00h). 
+\par 
+\par * Le compteur du registre BX indique le nombre de fois o\'f9 le bouton de la souris a \'e9t\'e9 enfonc\'e9 depuis la derni\'e8re interrogation. 
+\par 
+\par * Les valeurs retourn\'e9es pour la position du curseur correspondant \'e0}{\i\fs24\cf1  }{\fs24\cf1 la position occup\'e9e par le curseur sur l'\'e9cran la derni\'e8re fois que le bouton en question a \'e9t\'e9 enfonc\'e9. 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \adjustright {\b\i\fs24\cf1 Fonction 06h - }{\i\fs24\cf1 Etat des boutons de la souris (rel\'e2ch\'e9)}{\b\i\fs24\cf1  
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\i\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 06h 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    BX = Bouton de la souris 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties :  AX = Etat 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    BX = Compteur 
+\par    CX = Colonne occup\'e9e par le curseur lorsque le bouton a \'e9t\'e9 rel\'e2ch\'e9 pour la  
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1             \tab  derni\'e8re fois 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    DX = Ligne occup\'e9e par le curseur lorsque le bouton a \'e9t\'e9 rel\'e2ch\'e9 pour la     
+\par }\pard \li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1             \tab  derni\'e8re fois 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Vous devez sp\'e9cifier dans le registre BX sur quel bouton la fonction doit porter. Si vous sp\'e9cifiez la valeur 00h, II s'agira du bouton gauche. Si vous sp\'e9
+cifiez la valeur 0lh, Il s'agira du bouton droit. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Au retour de la fonction, vous pouvez savoir en consultant le registre AX si le bouton de la souris est enfonc\'e9 (AX = 01h) ou rel\'e2ch\'e9 (AX = 00h). 
+\par 
+\par * Le compteur du registre BX indique le nombre de fois o\'f9 le bouton de la souris a \'e9t\'e9 enfonc\'e9 depuis la derni\'e8re interrogation. 
+\par 
+\par * les valeurs retourn\'e9es pour la position du curseur correspondent \'e0 la position occup\'e9e par le curseur sur l'\'e9cran la derni\'e8re fois que le bouton en question a \'e9t\'e9 rel\'e2ch\'e9. 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\i\fs24\cf1 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \adjustright {\b\i\fs24\cf1 Fonction 07h}{\i\fs24\cf1  - Valeur maximale et minimale de colonne}{\b\i\fs24\cf1  
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\i\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 07h 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    CX = Limite gauche 
+\par    DX = Limite droite 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties : Aucune 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Au retour de la fonction, les d\'e9placements horizontaux du pointeur de la souris sont confin\'e9s aux limites de la zone d\'e9finie par CX:DX. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * La limite gauche repr\'e9sente la valeur minimale de la coordonn\'e9e X du pointeur tandis que la limite droite repr\'e9sente la valeur maximale de la coordonn\'e9e X. 
+\par }\pard \nowidctlpar\widctlpar\tx724\adjustright {\i\fs24\cf1 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \tx724\adjustright {\b\i\fs24\cf1 Fonction 08h}{\i\fs24\cf1  - Valeur maximale et minimale de ligne 
+\par }\pard \nowidctlpar\widctlpar\tx1137\adjustright {\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 08h 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    CX = Limite sup\'e9rieure 
+\par    DX = Limite inf\'e9rieure 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties : Aucune 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Au retour de la fonction, les d\'e9placements verticaux du pointeur de la souris sont confin\'e9s aux limites de la zone d\'e9finie par CX:DX.
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * La limite sup\'e9rieure repr\'e9sente la valeur minimale de la coordonn\'e9e Y du pointeur tandis que la limite inf\'e9rieure repr\'e9sente la valeur maximale de la coordonn\'e9e Y. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\b\f1\fs16\cf1 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \tx710\adjustright {\b\i\fs24\cf1 Fonction 09h}{\i\fs24\cf1  - Forme du pointeur graphique 
+\par }\pard \nowidctlpar\widctlpar\tx1128\adjustright {\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 09h 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    BX = D\'e9placement X du pixel de r\'e9f\'e9rence 
+\par    CX = D\'e9placement Y de pixel de r\'e9f\'e9rence 
+\par    DX = Adresse du d\'e9placement du masque 
+\par    ES  = Adresse du segment du masque 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties : Aucune 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction d\'e9termine la forme du pointeur de la souris en mode graphique. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Les registres ES:DX doivent contenir l'adresse du masque \'e9cran\tab et du masque de pointeur. Ces deux masques doivent se trouver \'e0 des adresses m\'e9moire contigu\'ebs. 
+\par 
+\par * Le masque de pointeur occupe 16 mots en m\'e9moire. Il d\'e9termine l'aspect du pointeur en mode graphique. La matrice 16 x 16 est interpr\'e9t\'e9e comme }{\i\fs24\cf1 bit-map }{\fs24\cf1 (mode point) pour le mode vid\'e9o en cours. Par cons\'e9
+quent, on peut utiliser plusieurs octets du masque de pointeur pour un pixel. 
+\par 
+\par * A l'instar du masque de pointeur, le masque \'e9cran se compose de 16 mots distincts. Avant que la combinaison binaire du masque de pointeur soit mise en \'9cuvre, vous pouvez d\'e9terminer \'e0}{\i\fs24\cf1  }{\fs24\cf1 l'aide du masque \'e9
+cran quels pixels devront \'eatre modifi\'e9s. Avant d'afficher le pointeur de l'\'e9cran, le gestionnaire de souris interpr\'e8te le masque \'e9cran comme une combinaison binaire qui fait l'objet d'une liaison ET logique avec le contenu de l'\'e9cran. 
+
+\par 
+\par * Les bits d'arri\'e8re-plan que vous souhaitez modifier \'e0}{\i\fs24\cf1  }{\fs24\cf1 l'aide du masque de pointeur doivent \'eatre cod\'e9s par un bit \'e9gal \'e0 0, ceux qui doivent rester intacts doivent \'eatre cod\'e9s par un bit \'e9gal \'e0
+ l. Vous devez sp\'e9cifier dans le masque \'e9cran quels pixels d'arri\'e8re-plan ne doivent pas \'eatre modifi\'e9s par le pointeur de la souris. 
+\par 
+\par * Le pixel de r\'e9f\'e9rence indique quel pixel du pointeur le gestionnaire de souris doit utiliser comme r\'e9f\'e9rence pour les coordonn\'e9es de la souris. Les coordonn\'e9es du pixel de r\'e9f\'e9rence sont des d\'e9placements par rapport \'e0}{
+\i\fs24\cf1  }{\fs24\cf1 l'angle sup\'e9rieur gauche du pointeur de la souris. Elles peuvent \'eatre comprises entre -127 et 128 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \adjustright {\b\i\fs24\cf1 Fonction 0Ah - }{\i\fs24\cf1 Forme du pointeur texte}{\b\i\fs24\cf1  
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 0Ah 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    BX = Type de pointeur 
+\par    CX = Masque \'e9cran/ligne de d\'e9but de l\rquote affichage du pointeur 
+\par    DX = Masque du pointeur/ligne de fin de l'affichage du pointeur 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties : Aucune 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Vous devez d\'e9terminer dans le registre BX le type de pointeur de souris qui doit \'eatre utilis\'e9 en mode texte. Si BX 00h, il s'agira d'un pointeur logiciel ; si BX = 01h, Il s'a
+gira d'un pointeur mat\'e9riel. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Si vous choisissez le pointeur mat\'e9riel, Le gestionnaire de souris utilisera le pointeur texte standard.
+\par 
+\par * Pour le pointeur mat\'e9riel, vous devez d\'e9finir dans les registres CX et DX \'e0 quelle ligne de balayage d'un caract\'e8re l'affichage du curseur doit d\'e9buter (CX) et \'e0 quelle ligne il doit prendre fin (DX). 
+\par 
+\par * Pour le pointeur logiciel, le masque \'e9cran doit \'eatre d\'e9fini dans le registre CX et le masque de pointeur dans le registre DX. 
+\par 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \adjustright {\b\i\fs24\cf1 Fonction 0Bh}{\i\fs24\cf1  - Lecture du compteur de d\'e9placements de la souris.
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 0Bh 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties  : CX = Compteur X 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    DX = Compteur Y 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction retourne le nombre contenu dans les compteurs de mickeys pour les  coordonn\'e9es X et Y, depuis le dernier appel de cette fonction.
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Un }{\i\fs24\cf1 mickey}{\fs24\cf1  correspond \'e0 environ l/200}{\fs24\cf1\super i\'e9me}{\fs24\cf1  de pouce. 
+\par 
+\par * Les valeurs contenues dans les compteurs peuvent aller de -32768 \'e0 32767. 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \tx408\adjustright {\b\i\fs24\cf1 Fonction 0Ch}{\i\fs24\cf1  - D\'e9finition des masques et adresses d'interruption 
+\par }\pard \nowidctlpar\widctlpar\tx408\adjustright {\i\fs24\cf1 
+\par }\pard \nowidctlpar\widctlpar\tx806\adjustright {\fs24\cf1 \tab Entr\'e9es : AX = 0Ch 
+\par }\pard \nowidctlpar\widctlpar\tx1617\adjustright {\fs24\cf1   \tab  CX = Masque d'appel 
+\par \tab  DX = Adresse du d\'e9placement du gestionnaire 
+\par \tab  ES = Adresse du segment du gestionnaire 
+\par }\pard \nowidctlpar\widctlpar\tx806\adjustright {\fs24\cf1 \tab Sorties : Aucune 
+\par 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction permet de d\'e9finir un nouveau sous-programme d'interruption pour les interruptions mat\'e9rielles de la souris. 
+\par 
+\par * La d\'e9finition d'un nouveau gestionnaire d'interruptions mat\'e9rielles pour la souris permet d'intercepter directement au niveau mat\'e9riel certaines actions r\'e9alis\'e9es sur la souris. 
+\par 
+\par * L'adresse du nouveau gestionnaire d'interruptions doit \'eatre sp\'e9cifi\'e9 dans les registres ES:DX. 
+\par 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Le masque d'appel d\'e9termin\'e9 dans le registre CX permet de sp\'e9cifier \'e0}{\i\fs24\cf1  }{\fs24\cf1 quelles occasions le nouveau gestionnaire devra \'eatre appel\'e9. 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par Le Tableau Fig.2}{\i\fs24\cf1  }{\fs24\cf1 pr\'e9sente la structure du registre CX 
+\par 
+\par }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx1134\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Bits\cell }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Signification\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr
+\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx1134\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb
+\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 15-5\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Inutilis\'e9s \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 4\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Le bouton gauche est rel\'e2ch\'e9 \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 3\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Le bouton gauche est enfonc\'e9 \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 2\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Le bouton droit est rel\'e2ch\'e9 \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 l\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Le bouton droit est enfonc\'e9 \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 
+\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx1134\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 0\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 La position du pointeur de souris change \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }{\i\fs24\cf1 Tableau Fig.2 : Le masque d'appel. 
+\par 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * En mettant \'e0}{\i\fs24\cf1  }{\fs24\cf1 1 les bits du masque d'appel, vous provoquez l'activation du gestionnaire d'interruptions par l'interruption mat\'e9rielle d\'e8
+s que les conditions correspondantes se d\'e9clarent. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Le sous-programme d'interruption ne doit pas se terminer par une instruction }{\i\fs24\cf1 iret}{\fs24\cf1  mais par une commande }{\i\fs24\cf1 far return. 
+\par 
+\par }{\fs24\cf1 * Lorsque votre gestionnaire d'interruptions est activ\'e9 suite \'e0 l'apparition d'une des conditions pr\'e9vues dans le masque d'appel, les registres du processeur poss\'e8dent les contenus suivants (voir Tableau Fig.3). 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx1843\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Registre\cell Contenu\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt
+\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx1843\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 AX\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Masque de conditions \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 BX\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Etat des boutons \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 CX\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Coordonn\'e9e X du pointeur de souris \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 DX\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Coordonn\'e9e Y du pointeur de souris \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 SI\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Compteur de }{\i\fs24\cf1 mickeys}{\fs24\cf1  X \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\trowd 
+\trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx1843\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 DI\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Compteur de }{\i\fs24\cf1 mickeys}{\fs24\cf1  Y \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }{\i\fs24\cf1 Tableau Fig.3 : La structure des registres apr\'e8s appel du gestionnaire}{\fs24\cf1  }{\i\fs24\cf1 d'interruptions. 
+\par 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Le masque de conditions vous permet de savoir quelle condition est \'e0 l'origine de l'activation du gestionnaire d'interruptions. Sa structure est identique \'e0
+ celle du masque d'appel. Lorsque le bit correspondant \'e0 une condition est \'e9gal \'e0 1, cela signifie que cette condition a entra\'een\'e9e la mise en \'9cuvre du gestionnaire. 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\fs24\cf1 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \adjustright {\b\i\fs24\cf1 Fonction 0Dh}{\i\fs24\cf1  - Activation de l'\'e9mulation du crayon optique 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\i\fs24\cf1 
+\par \tab }{\fs24\cf1 Entr\'e9es : AX = 0Dh 
+\par \tab Sorties  : Aucune 
+\par 
+\par * Au retour de cette fonction, le gestionnaire de la souris \'e9mule un crayon optique. 
+\par 
+\par * Pour simuler une pression sur le crayon optique, vous devez appuyer simultan\'e9ment sur les deux boutons de la souris. 
+\par 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \tx494\adjustright {\b\i\fs24\cf1 Fonction 0Eh}{\i\fs24\cf1  - D\'e9sactivation de l'\'e9mulation du crayon optique 
+\par }\pard \nowidctlpar\widctlpar\tx902\adjustright {\i\fs24\cf1 
+\par \tab }{\fs24\cf1 Entr\'e9es : AX = 0Eh 
+\par \tab Sorties : Aucune 
+\par 
+\par }\pard \nowidctlpar\widctlpar\tx8908\adjustright {\fs24\cf1 * Au retour de cette fonction, le gestionnaire de la souris cesse d'\'e9muler le crayon optique. 
+\par 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\i\fs24\cf1 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \adjustright {\b\i\fs24\cf1 Fonction 0Fh}{\i\fs24\cf1  - D\'e9finition du rapport}{\fs24\cf1  }{\i\fs24\cf1 mickeys / pixels 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\i\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 0Fh 
+\par }\pard \li1418\nowidctlpar\widctlpar\adjustright {\fs24\cf1    CX = Rapport X 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    DX = Rapport Y 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties : Aucune
+\par 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction d\'e9termine le rapport entre l'unit\'e9 de mesure des d\'e9placements de la souris (le }{\i\fs24\cf1 mickey}{\fs24\cf1 ) et le d\'e9placement du pointeur de la souris \'e0 l'\'e9cran. 
+
+\par 
+\par * Le param\'e8tre sp\'e9cifi\'e9 dans CX d\'e9finit le rapport entre les pixels horizontaux sur huit mickeys. 
+\par 
+\par * Le param\'e8tre sp\'e9cifi\'e9 dans DX d\'e9finit le rapport entre les pixels verticaux sur huit mickeys. 
+\par 
+\par * Les valeurs dans CX et DX doivent \'eatre comprises entre l et 32 767. 
+\par 
+\par * Le rapport standard est 8 sur 16. 
+\par 
+\par * Les donn\'e9es sp\'e9cifi\'e9es pour les pixels sont bas\'e9es sur l'\'e9cran virtuel. 
+\par 
+\par * Lorsque l'on augmente la valeur du mickey par rapport \'e0}{\i\fs24\cf1  }{\fs24\cf1 celle du pixel, les d\'e9placements de la souris sont plus lents ; si on la diminue, les d\'e9placements sont plus rapides.}{\fs18\cf1  
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\i\fs18\cf1 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \tx8376\adjustright {\b\i\fs24\cf1 Fonction 10h - }{\i\fs24\cf1 D\'e9sactivation conditionnelle de l\rquote affichage du pointeur de souris}{\b\i\fs24\cf1  
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\i\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 10h 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    CX = Coordonn\'e9e X droite 
+\par    DX = Coordonn\'e9e Y inf\'e9rieure 
+\par    SI   = Coordonn\'e9e X gauche 
+\par    DI   = Coordonn\'e9e Y sup\'e9rieure 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties : aucune 
+\par 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction d\'e9limite une zone sur l'\'e9cran virtuel. 
+\par 
+\par * Le gestionnaire de souris d\'e9sactive l'affichage du pointeur de la souris d\'e8s qu'il se trouve dans la zone sp\'e9cifi\'e9e. 
+\par 
+\par * Les param\'e8tres d\'e9finissent une zone rectangulaire sur l'\'e9cran. 
+\par 
+\par * Cette fonction a pour objet de modifier certaines zones de l'\'e9cran sans se pr\'e9occuper du pointeur de la souris. Vous pouvez d\'e9limiter une zone \'e0 l'aide de cette fonction puis la manipuler \'e0 votre gr\'e9. 
+\par 
+\par * Si le pointeur de la souris est d\'e9sactiv\'e9, seul l'appel de la fonction 0lh permettra de l'activer de nouveau. 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \tx398\adjustright {\b\i\fs24\cf1 Fonction 13h}{\i\fs24\cf1  - Point de d\'e9part pour la double vitesse 
+\par }\pard \nowidctlpar\widctlpar\tx398\adjustright {\i\fs24\cf1 
+\par }\pard \nowidctlpar\widctlpar\tx806\adjustright {\i\fs24\cf1 \tab }{\fs24\cf1 Entr\'e9es : AX = 13h 
+\par }\pard \nowidctlpar\widctlpar\tx1622\adjustright {\fs24\cf1 \tab  DX = Valeur limite 
+\par }\pard \nowidctlpar\widctlpar\tx782\adjustright {\fs24\cf1 \tab Sorties : Aucune 
+\par 
+\par }\pard \qj\nowidctlpar\widctlpar\tx1003\adjustright {\fs24\cf1 * Cette fonction permet de d\'e9terminer la valeur qui servira de point de d\'e9part du mode double vitesse lors des d\'e9placements de la souris. 
+\par }\pard \qj\nowidctlpar\widctlpar\tx979\adjustright {\fs24\cf1 
+\par * Le param\'e8tre du registre DX \'e9tablit le nombre de mickeys par seconde que doit parcourir la souris lorsqu'elle passe en mode double vitesse. 
+\par 
+\par }\pard \qj\nowidctlpar\widctlpar\tx955\adjustright {\fs24\cf1 * La valeur standard utilis\'e9e par le gestionnaire est 64. 
+\par }\pard \qj\nowidctlpar\widctlpar\tx950\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\tx950\adjustright {\fs24\cf1 * Pour d\'e9sactiver le mode double vitesse, appelez cette fonction en sp\'e9cifiant une valeur physiquement impossible \'e0 atteindre, telle que 4000h. 
+\par }\pard \nowidctlpar\widctlpar\tx950\adjustright {\fs24\cf1 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \tx950\adjustright {\b\i\fs24\cf1 Fonction 14h}{\i\fs24\cf1  - Lecture et modification des masques et des adresses d'interruption 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\i\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 14h 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    ES = Adresse du segment du gestionnaire d'interruptions 
+\par    CX = Masque d'appel 
+\par    DX = Adresse du d\'e9placement du gestionnaire d'interruptions 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties :  ES = Adresse du segment de l'ancien gestionnaire d'interruptions 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    CX = Adresse masque d'appel 
+\par    DX = Adresse du d\'e9placement de l'ancien gestionnaire d'interruptions 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction permet de d\'e9finir un nouveau sous-programme d'interruption pour les interruptions mat\'e9rielles de la souris et d\'e9
+termine l'adresse du gestionnaire d'interruptions en cours ainsi que celle du masque d'appel correspondant. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Le masque d'appel d\'e9termin\'e9 dans le registre CX permet de sp\'e9cifier \'e0 quelles occasions le nouveau gestionnaire devra \'eatre appel\'e9. 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par Le Tableau Fig.4 pr\'e9sente la structure du registre CX. 
+\par 
+\par }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx851\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Bits\cell }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Signification\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr
+\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx851\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb
+\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 15-5\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Inutilis\'e9s \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 4\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Le bouton gauche est rel\'e2ch\'e9 \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 3\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 le bouton gauche est enfonc\'e9 \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 2\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Le bouton droit est rel\'e2ch\'e9 \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 l\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Le bouton droit est enfonc\'e9 \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 
+\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx851\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 0\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 La position du pointeur de souris change \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\nowidctlpar\widctlpar\adjustright {\i\fs24\cf1 Tableau Fig.4 : Le masque d'appel. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * En mettant \'e0}{\i\fs24\cf1  }{\fs24\cf1 1 les bits du masque d'appel, vous provoquez l'activation du gestionnaire d'interruptions par l\rquote interruption mat\'e9rielle d\'e8
+s que les conditions correspondantes se d\'e9clarent. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Le sous-programme d\rquote interruptions ne doit pas se terminer par une instruction }{\i\fs24\cf1 iret }{\fs24\cf1 mais par un }{\i\fs24\cf1 far return}{\fs24\cf1  
+\par 
+\par * Lorsque le gestionnaire d'interruptions est activ\'e9 suite \'e0}{\i\fs24\cf1  }{\fs24\cf1 l'apparition d'une des conditions pr\'e9vues dans le masque d'appel, les registres du processeur poss\'e8dent les contenus pr\'e9sent\'e9s au Tableau Fig.5. 
+
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx1134\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard\plain \s2\qc\keepn\nowidctlpar\intbl\outlinelevel1\adjustright \b\cf1\lang1036\cgrid {
+Registre\cell }\pard\plain \qc\nowidctlpar\widctlpar\intbl\adjustright \fs20\lang1036\cgrid {\b\fs24\cf1 Contenu\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl
+\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx1134\clvertalt\clbrdrt
+\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 AX\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Masque de condition 
+\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 BX\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Etat des boutons \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 CX\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Coordonn\'e9e X du pointeur de souris \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 DX\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Coordonn\'e9e Y du pointeur de souris \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 SI\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Compteur de mickeys X \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 
+\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx1134\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 DI\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Compteur de mickeys Y \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }{\i\fs24\cf1 Tableau Fig.5 : la structure des registres apr\'e8s appel du gestionnaire d'interruptions}{\fs24\cf1 . 
+\par 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Le masque de conditions vous permet de savoir quelle condition est \'e0 l'origine de l'activation du gestionnaire d'interruptions. Sa structure est identique \'e0
+ celle du masque d'appel. Lorsque le bit correspondant \'e0 une condition est \'e9gal \'e0}{\i\fs24\cf1  }{\fs24\cf1 1, cela signifie que cette condition a entra\'een\'e9 la mise en \'9cuvre du gestionnaire. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Cette fonction retourne comme param\'e8tres l'adresse du gestionnaire d'interruptions utilis\'e9 jusque-l\'e0 ainsi que celle du masque d'appel correspondant.
+\par 
+\par 
+\par }\pard \qj\nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \adjustright {\b\i\fs24\cf1 Fonction 15h }{\i\fs24\cf1 - Taille du tampon pour l'\'e9tat du gestionnaire de la souris 
+\par }\pard \nowidctlpar\widctlpar\tx609\adjustright {\i\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 15h 
+\par }\pard \nowidctlpar\widctlpar\tx-5039\adjustright {\fs24\cf1 \tab Sortie   : BX = Taille du tampon de stockage des informations relatives \'e0 l'\'e9tat du 
+\par \tab \tab \tab  gestionnaire 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Cette fonction d\'e9termine la taille du tampon de m\'e9moire n\'e9cessaire pour prendre en charge toutes les informations relatives \'e0 l'\'e9tat du gestionnaire de la souris. 
+\par 
+\par * Vous pouvez appeler cette fonction avant de proc\'e9der \'e0}{\i\fs24\cf1  }{\fs24\cf1 l'ex\'e9cution de la fonction 16h ou 17h de mani\'e8re \'e0 calculer la taille du tampon n\'e9cessaire. 
+\par 
+\par 
+\par }{\i\fs18\cf1 
+\par }\pard \nowidctlpar\widctlpar\tx8496\adjustright {\i\fs18\cf1 
+\par }\pard \nowidctlpar\widctlpar\tx8496\adjustright {\i\fs18\cf1 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \tx8500\adjustright {\b\i\fs24\cf1 Fonction 16H}{\i\fs24\cf1  - Enregistrement de l'\'e9tat du gestionnaire de souris 
+\par }\pard \nowidctlpar\widctlpar\tx8913\adjustright {\b\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 16h 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1     ES = Adresse du segment du tampon 
+\par     DX =Adresse du d\'e9placement du tampon 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties : Aucune 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction permet d'enregistrer toutes les informations relatives \'e0}{\i\fs24\cf1  }{\fs24\cf1 l'\'e9tat du gestionnaire de la souris dans une zone tampon. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Le tampon doit avoir une capacit\'e9 suffisante pour accueillir toutes les informations. Vous pouvez d\'e9terminer la taille n\'e9cessaire en appelant la fonction 15h. 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par 
+\par }{\i\fs22\cf1 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \tx8385\adjustright {\b\i\fs24\cf1 Fonction 17H}{\i\fs24\cf1  - Restaurer l'\'e9tat du gestionnaire de souris 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\i\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9e : AX = 17h 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1   ES = Adresse du segment du tampon 
+\par   DX = Adresse du d\'e9placement du tampon 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sortie  : Aucune 
+\par 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction permet de restaurer l'\'e9tat du gestionnaire de souris enregistr\'e9 dans le tampon. 
+\par 
+\par * L'enregistrement des informations relatives \'e0}{\i\fs24\cf1  }{\fs24\cf1 l'\'e9tat du gestionnaire s'effectue \'e0}{\i\fs24\cf1  }{\fs24\cf1 l'aide de la fonction 16h. 
+\par 
+\par 
+\par }{\b\i\fs18\cf1 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \adjustright {\b\i\fs24\cf1 Fonction 18h}{\i\fs24\cf1  - Masques et adresses d'interruption \'e9tendus 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\i\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 18h 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    CX = Masque d'appel \'e9tendu 
+\par    DX = Adresse du d\'e9placement du gestionnaire d'interruptions 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties : ES  = Adresse du segment du gestionnaire d'interruptions 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    AX = Code d'\'e9tat 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction est analogue \'e0 la fonction 0Ch \'e0}{\i\fs24\cf1  }{\fs24\cf1 ceci pr\'e8s qu'elle permet de d\'e9
+finir des conditions faisant intervenir des combinaisons de boutons de la souris avec certaines touches du clavier. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Le masque d'appel \'e9tendu permet de sp\'e9cifier \'e0 quelles occasions le nouveau gestionnaire devra \'eatre appel\'e9. Le tableau Fig.6 pr\'e9sente la structure du masque d'appel \'e9tendu. 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par 
+\par 
+\par 
+\par }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx1134\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Bits\cell }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Signification\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr
+\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx1134\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb
+\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 15-8\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Inutilis\'e9s \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 7\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 La touche Alt est enfonc\'e9e et le bouton de la souris enfonc\'e9/rel
+\'e2ch\'e9 \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 6\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 La touche Ctrl est enfonc\'e9
+e et le bouton de la souris enfonc\'e9/rel\'e2ch\'e9 \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 5\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 
+La touche Majuscules est enfonc\'e9e et le bouton de la souris enfonc\'e9/rel\'e2ch\'e9 \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 4\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Le bouton gauche est rel\'e2ch\'e9 \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 3\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Le bouton gauche est enfonc\'e9 \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 2\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Le bouton droit est rel\'e2ch\'e9 \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 1\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Le bouton droit est enfonc\'e9. \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 
+\trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx1134\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb
+\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 0\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 La position du pointeur de souris change \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\adjustright {\i\fs24\cf1 
+\par Tableau Fig.6 : Le masque d'appel \'e9tendu. 
+\par }{\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * En mettant \'e0}{\i\fs24\cf1  }{\fs24\cf1 1 l'un des bits du masque d'appel \'e9tendu, vous sp\'e9
+cifiez que le gestionnaire d'interruptions doit effectuer un branchement sur le nouveau sous-progranme d'interruption 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 lorsque la condition correspondante se pr\'e9sente.
+\par 
+\par * Le nouveau sous-programme d'interruption dont vous sp\'e9cifiez l'adresse dans les registres ES:DX doit se terminer par un }{\i\fs24\cf1 far return. 
+\par 
+\par }{\fs24\cf1 * Lorsque votre gestionnaire d'interruptions est activ\'e9 suite \'e0 l'apparition d'une des conditions pr\'e9vues dans le masque d'appel \'e9tendu, les registres du processeur poss\'e8dent les contenus pr\'e9sent\'e9 au Tableau Fig.7. 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx1418\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Registre\cell }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Contenu\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 
+\trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx1418\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 AX\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Masque de conditions \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row 
+}\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 BX\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Etat des boutons\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 CX\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Coordonn\'e9e X du pointeur de souris \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 DX\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Coordonn\'e9e Y du pointeur de souris \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 SI\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Compteur de mickeys X \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt
+\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx1418
+\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 DI\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 
+Compteur de mickeys Y \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\adjustright {\i\fs24\cf1 
+\par Tableau Fig.7: La structure des registres apr\'e8s appel du gestionnaire d'interruption}{\fs24\cf1 . 
+\par 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Le masque de conditions vous permet de savoir quelle condition est \'e0 l'origine de l'activation du gestionnaire d'interruptions. Sa structure est identique \'e0
+ celle du masque d'appel lorsque le bit correspondant \'e0}{\i\fs24\cf1  }{\fs24\cf1 une condition est \'e9gal \'e0 1, cela signifie que cette condition a entra\'een\'e9 la mise en \'9cuvre du gestionnaire. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Le nombre maximal de sous-programmes d'interruption que vous pouvez installer simultan\'e9ment gr\'e2ce \'e0 cette fonction est Limit\'e9 \'e0 3. En outre, le masque d'appel mis en \'9cuvre doit \'eatre diff\'e9rent d'un sous-programme \'e0
+ un autre. Cela vous permet d'ailleurs d'intercepter diff\'e9rentes actions souris dans plusieurs proc\'e9dures diff\'e9rentes.
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \tx456\adjustright {\fs18\cf1  }{\b\i\fs24\cf1 Fonction 19h - }{\i\fs24\cf1 Lecture d'adresses d'interruption \'e9tendues}{\b\i\fs24\cf1  
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\i\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 19h 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    CX = Masque d'appel recherch\'e9 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties  : AX = Code d'erreur 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    BX = Adresse du segment du gestionnaire d'interruptions 
+\par    CX = Masque d'appel effectif 
+\par    DX = Adresse du d\'e9placement du gestionnaire d\rquote interruptions 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction d\'e9termine l'adresse d'un gestionnaire d'interruptions d\'e9fini par un programme. Ce gestionnaire sera mis en \'9cuvre d\'e8
+s qu'une certaine action concernant la souris aura lieu. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Vous devez sp\'e9cifier dans le registre CX \'e0 quelle action est associ\'e9 le gestionnaire d'interruptions dont vous voulez conna\'eetre l'adresse (voir Tableau Fig.8). 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx1418\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Bits\cell }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Signification\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr
+\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx1418\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb
+\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 15-8\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Inutilis\'e9 \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright 
+{\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 7\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 La touche Alt est enfonc\'e9e et le bouton de la souris enfonc\'e9/rel\'e2ch\'e9 \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 6\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 La touche Ctrl est enfonc\'e9e et le bouton de la souris enfonc\'e9
+/rel\'e2ch\'e9 \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 5\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 La touche Majuscules est enfonc\'e9
+e et le bouton de la souris enfonc\'e9/rel\'e2ch\'e9 \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 4\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 
+Le bouton gauche est rel\'e2ch\'e9 \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 3\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 
+Le bouton gauche est enfonc\'e9 \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 2\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Le bouton droit est rel
+\'e2ch\'e9 Le bouton droit est enfonc\'e9 \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 
+\trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx1418\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 
+\cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 0\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 La position du pointeur de souris change \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 
+\row }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }{\i\fs24\cf1 Tableau Fig.8 : Le masque d'appel \'e9tendu. 
+\par }{\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * En mettant \'e0 l l'un des bits du masque d'appel \'e9tendu, vous sp\'e9cifiez que vous voulez conna\'eetre l'adresse du gestionnaire d'interruptions pour l'action correspondante. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Cette fonction retourne dans les registre BX:DX l'adresse du gestionnaire d'interruptions correspondant \'e0 l'action sp\'e9cifi\'e9e dans le masque d'appel (celle dont le bit est \'e9gal \'e0}{\i\fs24\cf1  }{\fs24\cf1 1). 
+\par 
+\par * Cette fonction place dans le registre CX le masque d'appel associ\'e9 au gestionnaire d'interruptions (voir Tableau Fig.8). 
+\par 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }{\b\i\fs18\cf1 
+\par }\pard \nowidctlpar\widctlpar\tx8126\adjustright {\b\i\fs18\cf1 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \tx8126\adjustright {\b\i\fs24\cf1 Fonction 1Ah - }{\i\fs24\cf1 Modification de la sensibilit\'e9 de la souris}{\b\i\fs24\cf1  
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 1Ah 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1     BX = Sensibilit\'e9 X 
+\par     CX = Sensibilit\'e9 Y 
+\par     DX = Point de d\'e9part de la double vitesse 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties  : Aucune 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction d\'e9termine via les registres BX et CX la sensibilit\'e9 de la souris \'e0 l'\'e9cran. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * La sensibilit\'e9 de la souris se mesure comme un rapport entre les pixels et les mickeys. 
+\par 
+\par * Une sensibilit\'e9 \'e9gale \'e0 50 correspond au facteur mickey standard 1. 
+\par 
+\par * Le param\'e8tre sp\'e9cifi\'e9 dans DX vous permet d'indiquer la valeur limite \'e0
+ partir de laquelle le gestionnaire de la souris doit activer le mode double vitesse. La valeur que contient le registre DX exprime le nombre de mickeys par seconde auquel correspond le mode double vitesse. 
+\par 
+\par * La valeur standard utilis\'e9e par le gestionnaire de souris est 50. 
+\par }\pard \nowidctlpar\widctlpar\tx9062\adjustright {\fs24\cf1 
+\par 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \tx8438\adjustright {\b\i\fs24\cf1 Fonction 1Bh - }{\i\fs24\cf1 Lecture de la sensibilit\'e9 de la souris 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\i\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es :  AX = 1Bh 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1      BX = Sensibilit\'e9 X  
+\par      CX = Sensibilit\'e9 Y 
+\par      DX = Point de d\'e9part de la double vitesse 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties  : Aucune 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction d\'e9termine via les registres BX et CX la sensibilit\'e9 de la souris \'e0 l'\'e9cran. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * La sensibilit\'e9 de la souris est le rapport entre le pixels et les mickeys. 
+\par 
+\par * Une sensibilit\'e9 \'e9gale \'e0 50 correspond au facteur }{\i\fs24\cf1 mickeys }{\fs24\cf1 standard l. 
+\par 
+\par * Le param\'e8tre sp\'e9cifi\'e9 dans DX vous permet d'indiquer la valeur limite \'e0 partir de laquelle
+ le gestionnaire de la souris doit activer le mode double vitesse. la valeur que contient le registre DX exprime le nombre de mickeys par seconde auquel correspond le mode double vitesse. 
+\par 
+\par * La valeur standard utilis\'e9e par le gestionnaire de souris est 50. 
+\par 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \adjustright {\b\i\fs24\cf1 Fonction 1Ch - }{\i\fs24\cf1 Fr\'e9quence d'interruption de la souris}{\b\i\fs24\cf1 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 1Ch 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    BX = Fr\'e9quence d'interruption 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties  : Aucune 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction permet de d\'e9terminer la fr\'e9quence \'e0 laquelle le gestionnaire de la souris interrogera cette derni\'e8re. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * La fr\'e9quence d'interruption sp\'e9cifie le nombre d'interrogations de la souris par seconde. Les valeurs possibles sont comprises entre 00h et 04h. Le Tableau Fig.9 d\'e9crit en d\'e9tail ces diff\'e9rentes valeurs. 
+\par 
+\par * Cette fonction ne peut \'eatre utilis\'e9e que pour les souris Import. 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx1134\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Code\cell }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Fr\'e9quence\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr
+\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx1134\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb
+\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 00h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Aucune interrogation \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 01h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 30 interrogations par seconde \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 02h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 50 interrogations par seconde \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 03h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 100 interrogations par seconde \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 
+\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx1134\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 04h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 200 interrogations par seconde \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\nowidctlpar\widctlpar\adjustright {\i\fs24\cf1 
+\par Tableau Fig.9 : Les code}{\fs24\cf1  }{\i\fs24\cf1 de fr\'e9quence d'interruption.
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \adjustright {\b\i\fs24\cf1 Fonction 1Dh - }{\i\fs24\cf1 D\'e9finition du num\'e9ro de la page \'e9cran }{\b\i\fs24\cf1 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\i\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 1Dh 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    BX = Page \'e9cran 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties  : Aucune 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction d\'e9termine le num\'e9ro de la page \'e9cran sur laquelle doit appara\'eetre le pointeur de la souris. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Le nombre de pages \'e9cran autoris\'e9 varie en fonction du mode vid\'e9o en cours et de la carte graphique install\'e9. 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }{\fs18\cf1 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }{\b\f1\fs16\cf1 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \tx8414\adjustright {\b\i\fs24\cf1 Fonction 1Eh}{\i\fs24\cf1  - Lecture du num\'e9ro de la page \'e9cran 
+\par }\pard \nowidctlpar\widctlpar\tx8414\adjustright {\i\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 1Eh 
+\par Sorties  : BX = Page \'e9cran 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction retourne le num\'e9ro de la page \'e9cran sur laquelle se trouve actuellement le pointeur de la souris. 
+\par 
+\par * Le nombre de pages \'e9cran autoris\'e9 varie en fonction du mode vid\'e9o en cours et de la carte graphique install\'e9e. 
+\par 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \adjustright {\b\i\fs24\cf1 Fonction 1Fh - }{\i\fs24\cf1 D\'e9sactiver le gestionnaire de souris}{\b\i\fs24\cf1  
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\i\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX  = 1Fh 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties  : AX  = Code d'erreur 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1     BX = Adresse du d\'e9placement de l'interruption 33h 
+\par     CX = Adresse du segment de l'interruption 33h 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction d\'e9sactive le gestionnaire de souris 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Elle retourne dans les registres CX:BX l'adresse du gestionnaire d'interruption d\'e9sactiv\'e9. 
+\par 
+\par * Lorsqu'il s'av\'e8re impossible de d\'e9sactiver le gestionnaire d'interruption, la fonction vous le fait savoir en pla\'e7ant le code d'erreur FFFFh dans le registre AX. }{\b\f1\fs16\cf1 
+\par }\pard \nowidctlpar\widctlpar\tx1224\adjustright {\b\fs24\cf1 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \tx1224\adjustright {\b\i\fs24\cf1 Fonction 20h - }{\i\fs24\cf1 Activer le gestionnaire de souris 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\i\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 20h 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties  : Aucune 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction active le gestionnaire de souris. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Vous devez appeler cette fonction si vous voulez activer un gestionnaire de souris que vous avez d\'e9sactiv\'e9 \'e0}{\i\fs24\cf1  }{\fs24\cf1 l'aide de la fonction 1Fh. 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \tx1204\adjustright {\b\i\fs24\cf1 Fonction 21h}{\i\fs24\cf1  - R\'e9initialisation logiciel}{\b\i\fs24\cf1  
+\par }\pard \nowidctlpar\widctlpar\tx1588\adjustright {\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9s  : AX = 21h 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties : AX = Code d'erreur 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1   BX = 02h 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction ex\'e9cute une r\'e9initialisation logicielle du gestionnaire de souris, et entra\'eene par cons\'e9quent une restauration des param\'e8tres standard. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Le code d'erreur retourn\'e9 dans le registre AX vous permet de savoir si un gestionnaire de souris est install\'e9. S'il est \'e9gal \'e0}{\i\fs24\cf1  }{\fs24\cf1 FFFFh, un gestionnaire de souris est install\'e9 ; par contre, s'il est \'e9gal \'e0
+ 21h, aucun gestionnaire de souris n'est install\'e9. 
+\par 
+\par * Si un gestionnaire de souris est install\'e9, la fonction retourne la valeur 02h dans le registre BX, si la valeur que contient BX est diff\'e9rente de 02h ou celle que contient AX diff\'e9
+rente de FFFFh, aucun gestionnaire de souris standard n'est install\'e9. 
+\par 
+\par * La fonction r\'e9initialise le gestionnaire en lui attribuant les param\'e8tres pr\'e9sent\'e9s au Tableau Fig.10.
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par 
+\par }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx2977\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Param\'e8tre\cell }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Valeur standard\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr
+\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx2977\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb
+\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Position\cell Centre de l'\'e9cran \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Indicateur du curseur\cell FFFFh (curseur d\'e9sactiv\'e9) \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 
+Curseur graphique\cell Fl\'e8che \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Curseur texte\cell Rectangle \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {
+\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Masque d'interruption\cell 0000h (aucune interruption) \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {
+\fs24\cf1 Crayon optique\cell Pas d'\'e9mulation \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Rapport horizontal\cell 8 sur 8 \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Rapport vertical\cell 16 sur 8 \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Vitesse double\cell 16 mickeys par seconde \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Valeur minimale de colonne
+\cell 0000h \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Valeur minimale de ligne\cell 0000h \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Valeur maximale de Colonne\cell Valeur X maximale - l \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 
+Valeur maximale de ligne\cell Valeur Y maximale - l \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh
+\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx2977\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Num\'e9ro de page\cell 00h \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\tx9168\adjustright {\i\fs24\cf1 
+
+\par Tableau Fig.10 : Les valeurs de r\'e9glage de la}{\fs24\cf1  }{\i\fs24\cf1 souris. 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \tx8764\adjustright {\b\i\fs24\cf1 Fonction 22h}{\i\fs24\cf1  - Langue utilis\'e9e}{\b\i\fs24\cf1  
+\par }\pard \nowidctlpar\widctlpar\adjustright {\b\i\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 22h 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    BX = Langue 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties : Aucune 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction d\'e9termine la langue que le gestionnaire de souris doit utiliser lorsqu'il affiche des messages ou des conseils \'e0 l'\'e9cran. 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \qj\nowidctlpar\widctlpar\adjustright {\fs24\cf1 * le code de la langue voulue doit \'eatre sp\'e9cifi\'e9 dans le registre BX (voir Tableau Fig.11). 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx851\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Code\cell }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Langue\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 
+\trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx851\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 00h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Anglais \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 01h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Fran\'e7ais \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 02h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 N\'e9erlandais \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 03h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Allemand \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {
+\fs24\cf1 04h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Su\'e9dois \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 05h\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Finlandais \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 06h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {
+\fs24\cf1 Espagnol \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 07h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Portugais \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 
+\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx851\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 08h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Italien \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\adjustright {
+\i\fs24\cf1 Tableau Fig.11 : Les codes de langues pour le gestionnaire de la souris.
+\par }\pard \nowidctlpar\widctlpar\tx960\adjustright {\i\fs18\cf1 
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \adjustright {\b\i\fs24\cf1 Fonction 23h}{\i\fs24\cf1  - Lecture des num\'e9ros des langues 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9es : AX = 23h 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1    BX = Langue s\'e9lectionn\'e9e 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sortie  : Aucune 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 * Cette fonction d\'e9termine la langue que le gestionnaire de souris utilise lorsqu'il affiche des messages ou des conseils \'e0 l'\'e9cran. 
+\par 
+\par * Le code de la langue voulue tient sur un octet et est retourn\'e9 dans le registre BX (voir Tableau Fig.12). 
+\par 
+\par }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx1418\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Code\cell }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Langue\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 
+\trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx1418\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 00h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Anglais \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 01h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Fran\'e7ais \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 02h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 N\'e9erlandais \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 03h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Allemand \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {
+\fs24\cf1 04h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Su\'e9dois \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 05h\cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Finlandais \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 06h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {
+\fs24\cf1 Espagnol \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 07h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Portugais \cell }\pard 
+\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 
+\clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx1418\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 08h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Italien \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\adjustright {
+\i\fs24\cf1 Tableau Fig.12 : Les codes de langues pour le gestionnaire de la souris.
+\par }\pard \nowidctlpar\widctlpar\brdrt\brdrs\brdrw30\brsp20 \brdrb\brdrs\brdrw30\brsp20 \adjustright {\b\i\fs24\cf1 Fonction 24h}{\i\fs24\cf1  - Obtention d'information concernant la configuration 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Entr\'e9e  : AX = 24h 
+\par }\pard \fi709\nowidctlpar\widctlpar\adjustright {\fs24\cf1 Sorties : BX = Version 
+\par }\pard \fi709\li709\nowidctlpar\widctlpar\adjustright {\fs24\cf1   CH = Type de souris 
+\par   CL = Ligne d'interruption 
+\par }\pard \nowidctlpar\widctlpar\adjustright {\fs24\cf1 
+\par * Cette fonction retourne une liste de donn\'e9es de configuration concernant la souris connect\'e9e. 
+\par 
+\par * Le num\'e9ro de version du gestionnaire de souris est repr\'e9sent\'e9 par un code que contient le registre BX au retour de la fonction : BH contient le num\'e9ro de version principal et BL le num\'e9ro de version secondaire. 
+\par 
+\par * Le registre CH vous permet de savoir quel est le type de la souris connect\'e9e, le Tableau Fig.13 pr\'e9sente les valeurs possibles et les types correspondants. 
+\par 
+\par }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx1134\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Code\cell }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 Souris\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\b\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 \trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 
+\trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx1134\clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr
+\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 01h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Souris bus \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 02h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Souris s\'e9rie \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 03h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Souris Import \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard 
+\qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 04h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Souris PS/2 \cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\trowd \trgaph70\trleft-70\trbrdrt\brdrs\brdrw15 
+\trbrdrl\brdrs\brdrw15 \trbrdrb\brdrs\brdrw15 \trbrdrr\brdrs\brdrw15 \trbrdrh\brdrs\brdrw15 \trbrdrv\brdrs\brdrw15 \clvertalt\clbrdrt\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx1134\clvertalt\clbrdrt
+\brdrs\brdrw15 \clbrdrl\brdrs\brdrw15 \clbrdrb\brdrs\brdrw15 \clbrdrr\brdrs\brdrw15 \cltxlrtb \cellx9142\pard \qc\nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 05h\cell }\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 Souris HP \cell 
+}\pard \nowidctlpar\widctlpar\intbl\adjustright {\fs24\cf1 \row }\pard \nowidctlpar\widctlpar\adjustright {\i\fs24\cf1 
+\par Tableau Fig.13 : Les codes des types de souris.}{\i\f1\fs16\cf1  
+\par }\pard \nowidctlpar\widctlpar\adjustright {
+\par }}

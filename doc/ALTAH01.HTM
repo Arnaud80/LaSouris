@@ -1,0 +1,2214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+   <TITLE>PrograZine 1 - Programmation de la souris - Altar</TITLE>
+   <META NAME="Author" CONTENT="Discase">
+   <META NAME="GENERATOR" CONTENT="Mozilla/3.01Gold [fr] (Win95; I) [Netscape]">
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFFF" LINK="#0000FF" VLINK="#0000FF" ALINK="#000080" BACKGROUND="../spiral.gif">
+
+<DIV ALIGN=right><P><A HREF="../index.htm"><IMG SRC="../fold.gif" BORDER=0 HEIGHT=93 WIDTH=119 ALIGN=CENTER></A></P></DIV>
+
+<TABLE>
+<TR>
+<TD ALIGN=LEFT VALIGN=TOP>
+<UL>
+<P><IMG SRC="../amateur.gif" HEIGHT=34 WIDTH=154> </P>
+</UL>
+</TD>
+
+<TD ALIGN=LEFT VALIGN=CENTER><IMG SRC="../msdos.gif" HEIGHT=34 WIDTH=154></TD>
+
+<TD ALIGN=LEFT VALIGN=BOTTOM></TD>
+</TR>
+</TABLE>
+
+<DIV ALIGN=right><P><IMG SRC="../rule4.gif" HEIGHT=9 WIDTH=499></P></DIV>
+
+<TABLE WIDTH="100%" >
+<TR ALIGN=LEFT VALIGN=TOP>
+<TD WIDTH="80%">
+<UL>
+<CENTER><P><FONT SIZE=+3>&nbsp;</FONT></P></CENTER>
+
+<CENTER><P><FONT SIZE=+3>LA SOURIS&nbsp;</FONT></P></CENTER>
+
+<CENTER><P><FONT SIZE=+3>&nbsp;</FONT><FONT SIZE=+2>&nbsp;</FONT></P></CENTER>
+
+<CENTER><P><FONT SIZE=+2>Comment programmer l'un des p&eacute;riph&eacute;riques
+les plus utilis&eacute;s ?</FONT></P></CENTER>
+
+<CENTER><P>(Derni&egrave;re modification le 04/06/97)</P></CENTER>
+
+<CENTER><P>&nbsp;</P></CENTER>
+
+<P>&nbsp;</P>
+
+<P>&nbsp;</P>
+
+<P>&nbsp;</P>
+
+<P>&nbsp;</P>
+
+<P>&nbsp;</P>
+
+<CENTER><P><B>&nbsp;</B></P></CENTER>
+
+<CENTER><P><B><FONT SIZE=+3>SOMMAIRE</FONT></B></P></CENTER>
+
+<CENTER><P><B><FONT SIZE=+3>&nbsp;</FONT></B></P></CENTER>
+
+<P><A HREF="#intro">Introduction</A></P>
+
+<P><A HREF="#f00">Fonction 00h - Etat et r&eacute;initialisation de la
+souris.</A></P>
+
+<P><A HREF="#f01">Fonction 01h - Affichage du pointeur de la souris</A></P>
+
+<P><A HREF="#f02">Fonction 02h - Masquage du pointeur de la souris</A></P>
+
+<P><A HREF="#f03">Fonction 03h - Etat des boutons et position de la souris</A></P>
+
+<P><A HREF="#f04">Fonction 04h - Positionnement du pointeur de la souris</A></P>
+
+<P><A HREF="#f05">Fonction 05h - Etat des boutons de la souris (enfonc&eacute;)</A></P>
+
+<P><A HREF="#f06">Fonction 06h - Etat des boutons de la souris (rel&acirc;ch&eacute;)</A></P>
+
+<P><A HREF="#f07">Fonction 07h - Valeur maximal et minimale de colonne</A></P>
+
+<P><A HREF="#f08">Fonction 08h - Valeur maximal et minimal de ligne</A></P>
+
+<P><A HREF="#f09">Fonction 09h - Forme du pointeur graphique</A></P>
+
+<P><A HREF="#f0a">Fonction 0Ah - Forme du pointeur texte</A></P>
+
+<P><A HREF="#f0b">Fonction 0Bh - Lecture du compteur de d&eacute;placements
+de la souris</A></P>
+
+<P><A HREF="#f0c">Fonction 0Ch - D&eacute;finition des masques et adresses
+d'interruption</A></P>
+
+<P><A HREF="#f0d">Fonction 0Dh - Activation de l'&eacute;mulation du crayon
+optique</A></P>
+
+<P><A HREF="#f0e">Fonction 0Eh - D&eacute;sactivation de l'&eacute;mulation
+du crayon optique</A></P>
+
+<P><A HREF="#f0f">Fonction 0Fh - D&eacute;finition du rapport mickeys/pixels</A></P>
+
+<P><A HREF="#f10">Fonction 10h - D&eacute;sactivation conditionnelle de
+l'affichage du pointeur de souris</A></P>
+
+<P><A HREF="#f13">Fonction 13h - Point de d&eacute;part pour la double
+vitesse</A></P>
+
+<P><A HREF="#f14">Fonction 14h - Lecture et modification des masques et
+des adresses d'interruption</A></P>
+
+<P><A HREF="#f15">Fonction 15h - Taille du tampon pour l'&eacute;tat du
+gestionnaire de la souris</A></P>
+
+<P><A HREF="#f16">Fonction 16h - Enregistrement de l'&eacute;tat du gestionnaire
+de souris</A></P>
+
+<P><A HREF="#f17">Fonction 17h - Restaurer l'&eacute;tat du gestionnaire
+de souris</A></P>
+
+<P><A HREF="#f18">Fonction 18h - Masque et adresses d'interruption &eacute;tendus</A></P>
+
+<P><A HREF="#f19">Fonction 19h - Lecture d'adresses d'interruption &eacute;tendues</A></P>
+
+<P><A HREF="#f1a">Fonction 1Ah - Modification de la sensibilit&eacute;
+de la souris</A></P>
+
+<P><A HREF="#f1b">Fonction 1Bh - Lecture de la sensibilit&eacute; de la
+souris</A></P>
+
+<P><A HREF="#f1c">Fonction 1Ch - Fr&eacute;quence d'interruption de la
+souris</A></P>
+
+<P><A HREF="#f1d">Fonction 1Dh - D&eacute;finition du num&eacute;ro de
+la page &eacute;cran</A></P>
+
+<P><A HREF="#f1e">Fonction 1Eh - Lecture du num&eacute;ro de la page &eacute;cran</A></P>
+
+<P><A HREF="#f1f">Fonction 1Fh - D&eacute;sactiver le gestionnaire de souris</A></P>
+
+<P><A HREF="#f20">Fonction 20h - Activer le gestionnaire de souris</A></P>
+
+<P><A HREF="#f21">Fonction 21h - R&eacute;initialisation logicielle</A></P>
+
+<P><A HREF="#f22">Fonction 22h - Langue utilis&eacute;e</A></P>
+
+<P><A HREF="#f23">Fonction 23h - Lecture des num&eacute;ro des langues</A></P>
+
+<P><A HREF="#f24">Fonction 24h - Obtention d'informations concernant la
+configuration</A></P>
+
+<P><B>&nbsp;</B></P>
+
+<P><A NAME="intro"></A><B><I>Introduction : </I></B></P>
+
+<P>Cette documentation n'a pas la pr&eacute;tention d'&ecirc;tre compl&egrave;te,
+il manque certainement des choses, et il est certainement possible d'optimiser
+les sources. Mais si une personne rencontre ces probl&egrave;mes quelle
+n'h&eacute;site surtout pas &agrave; m'en faire part.</P>
+
+<P><B><I><FONT SIZE=+2>L'interruption </FONT>33h - Gestion de la souris
+</I></B></P>
+
+<P>l'interruption 33h sert d'interface avec le gestionnaire de la souris.
+Les param&egrave;tres<B> </B>n&eacute;cessaires &agrave;<B> </B>la fonction
+sont transmis via<B> </B>les registres du processeur. </P>
+
+<P><B>&nbsp;</B></P>
+
+<P><A NAME="f00"></A><B><I>Fonction 00h - </I>Etat et r&eacute;initialisation
+de la souris </B></P>
+
+<P>Entr&eacute;es : AX = 00h </P>
+
+<P>Sorties : AX = Etat </P>
+
+<P>BX = Nombre de boutons </P>
+
+<P>* Cette fonction retourne l'&eacute;tat actuel de la souris (&eacute;tat
+mat&eacute;riel et logiciel). </P>
+
+<P>* Le code d'&eacute;tat indique si une souris est install&eacute;e.
+S'il est &eacute;gal &agrave; FFFFh, une souris est install&eacute;e ;
+par contre, s'il est &eacute;gal &agrave; 0000h, aucune souris n'est install&eacute;e.
+</P>
+
+<P>* La valeur retourn&eacute;e dans le registre BX repr&eacute;sente le
+nombre de boutons dont est dot&eacute;e la souris. </P>
+
+<P>* Si une souris est connect&eacute;e, cette fonction initialise l'interface.
+Les valeurs standard pr&eacute;sent&eacute;es au Tableau Fig.1 sont alors
+appliqu&eacute;es. </P>
+
+<P><B>&nbsp;</B></P>
+
+<TABLE BORDER=1 CELLPADDING=4 WIDTH="614" BGCOLOR="#C0C0C0" BORDERCOLOR="#000000" >
+<TR>
+<TD WIDTH="50%" VALIGN="TOP">
+<CENTER><P><B>Param&egrave;tre</B></P></CENTER>
+</TD>
+
+<TD WIDTH="50%" VALIGN="TOP">
+<CENTER><P><B>Valeur standard</B></P></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="50%" VALIGN="TOP">Position</TD>
+
+<TD WIDTH="50%" VALIGN="TOP">Centre de l'&eacute;cran </TD>
+</TR>
+
+<TR>
+<TD WIDTH="50%" VALIGN="TOP">Indicateur du curseur</TD>
+
+<TD WIDTH="50%" VALIGN="TOP">FFFFh (curseur d&eacute;sactiv&eacute;) </TD>
+</TR>
+
+<TR>
+<TD WIDTH="50%" VALIGN="TOP">Curseur graphique</TD>
+
+<TD WIDTH="50%" VALIGN="TOP">fl&egrave;che </TD>
+</TR>
+
+<TR>
+<TD WIDTH="50%" VALIGN="TOP">Curseur texte</TD>
+
+<TD WIDTH="50%" VALIGN="TOP">Rectangle </TD>
+</TR>
+
+<TR>
+<TD WIDTH="50%" VALIGN="TOP">Masque d'interruption</TD>
+
+<TD WIDTH="50%" VALIGN="TOP">0000h (aucune interruption) </TD>
+</TR>
+
+<TR>
+<TD WIDTH="50%" VALIGN="TOP">Crayon optique</TD>
+
+<TD WIDTH="50%" VALIGN="TOP">Pas d'&eacute;mulation </TD>
+</TR>
+
+<TR>
+<TD WIDTH="50%" VALIGN="TOP">Rapport horizontal</TD>
+
+<TD WIDTH="50%" VALIGN="TOP">8 sur 8 </TD>
+</TR>
+
+<TR>
+<TD WIDTH="50%" VALIGN="TOP">Rapport vertical</TD>
+
+<TD WIDTH="50%" VALIGN="TOP">l6 sur 8 </TD>
+</TR>
+
+<TR>
+<TD WIDTH="50%" VALIGN="TOP">Vitesse double</TD>
+
+<TD WIDTH="50%" VALIGN="TOP">16 mickeys par seconde </TD>
+</TR>
+
+<TR>
+<TD WIDTH="50%" VALIGN="TOP">Valeur minimale de colonne</TD>
+
+<TD WIDTH="50%" VALIGN="TOP">0000h </TD>
+</TR>
+
+<TR>
+<TD WIDTH="50%" VALIGN="TOP">Valeur minimale de ligne</TD>
+
+<TD WIDTH="50%" VALIGN="TOP">0000h </TD>
+</TR>
+
+<TR>
+<TD WIDTH="50%" VALIGN="TOP">Valeur maximale de colonne</TD>
+
+<TD WIDTH="50%" VALIGN="TOP">Valeur X maximale - l </TD>
+</TR>
+
+<TR>
+<TD WIDTH="50%" VALIGN="TOP">Valeur maximale de ligne</TD>
+
+<TD WIDTH="50%" VALIGN="TOP">Valeur Y maximale - l </TD>
+</TR>
+
+<TR>
+<TD WIDTH="50%" VALIGN="TOP">Num&eacute;ro de page</TD>
+
+<TD WIDTH="50%" VALIGN="TOP">00h </TD>
+</TR>
+</TABLE>
+
+<P><I>Tableau Fig.1 : Les valeurs de r&eacute;glage standard de</I> <I>la
+souris.</I> </P>
+
+<P><A NAME="f01"></A><B><I>Fonction 01H</I> - Affichage du pointeur de
+la souris</B></P>
+
+<P>Entr&eacute;es : AX = 01h </P>
+
+<P>Sorties : Aucune </P>
+
+<P>* Cette fonction permet d'activer le pointeur de souris en cours et
+de l'afficher &agrave; l'&eacute;cran. </P>
+
+<P>* Une fois l'affichage du pointeur activ&eacute;, la souris se d&eacute;place
+conform&eacute;ment aux param&egrave;tres actuellement d&eacute;finis.
+</P>
+
+<P>* Si cette fonction est appel&eacute;e alors que l'affichage du pointeur
+de la souris est d&eacute;j&agrave; activ&eacute;, elle reste sans effet.
+</P>
+
+<P><A NAME="f02"></A><B><I>Fonction 02h - </I>Masquage du pointeur de la
+souris </B></P>
+
+<P>Entr&eacute;es : AX = 02h </P>
+
+<P>Sortie : Aucune </P>
+
+<P>* Cette fonction permet de d&eacute;sactiver le pointeur de souris.</P>
+
+<P>* Une fois l'affichage du pointeur d&eacute;sactiv&eacute;, les mouvements
+imprim&eacute;s &agrave; la souris ne sont plus pris en compte. </P>
+
+<P>* Si cette fonction est appel&eacute;e alors que l'affichage du pointeur
+de la souris est d&eacute;j&agrave; d&eacute;sactiv&eacute;, elle reste
+sans effet. </P>
+
+<P>* Le pointeur de la souris doit toujours &ecirc;tre d&eacute;sactiv&eacute;
+&agrave; l'aide de cette fonction avant tout changement de mode vid&eacute;o.
+</P>
+
+<P><A NAME="f03"></A><B><I>Fonction 03h - </I>Etat des boutons et position
+de la souris </B></P>
+
+<P>Entr&eacute;es : AX = 03h </P>
+
+<P>Sorties : BX = Etat des boutons de la souris </P>
+
+<DIR>
+<DIR>
+<P>CX = Colonne occup&eacute;e actuellement par le curseur </P>
+
+<DIR>
+<DIR>
+<P>DX = Ligne occup&eacute;e actuellement par le curseur </P>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<P>* A chaque bouton de la souris correspond un bit dont la valeur refl&egrave;te
+l'&eacute;tat : le bit 0 correspond au bouton gauche, le bit l au bouton
+droit. </P>
+
+<P>* Lorsqu'un bit est &eacute;gal &agrave; 1, le bouton auquel il correspond
+est enfonc&eacute;. Par contre, s'il est &eacute;gal &agrave; 0, le bouton
+est rel&acirc;ch&eacute;. </P>
+
+<P>* Les registres CX et DX Indiquent la position du curseur de la souris
+sur l'&eacute;cran. Les coordonn&eacute;es sp&eacute;cifi&eacute;es sont
+celles de l'&eacute;cran virtuel </P>
+
+<P><A NAME="f04"></A><B><I>Fonction 04h </I>- Positionnement du pointeur
+de la souris </B></P>
+
+<P>Entr&eacute;es : AX = 04h </P>
+
+<P>CX = Colonne </P>
+
+<P>DX = Ligne </P>
+
+<P>Sorties : Aucune </P>
+
+<P>* Cette fonction positionne le curseur de la souris &agrave;<I> </I>un
+emplacement particulier de l'&eacute;cran. </P>
+
+<P>* Les registres CX et DX sp&eacute;cifient la position du curseur de
+la souris sur l'&eacute;cran. Les coordonn&eacute;es sp&eacute;cifi&eacute;es
+sont celles de l'&eacute;cran virtuel. </P>
+
+<P><A NAME="f05"></A><B><I>Fonction 05h</I> - Etat des boutons de la souris
+(enfonc&eacute;) </B></P>
+
+<P>Entr&eacute;e : AX = 05h </P>
+
+<DIR>
+<DIR>
+<P>BX = Bouton de la souris </P>
+</DIR>
+</DIR>
+
+<P>Sorties : AX = Etat </P>
+
+<DIR>
+<DIR>
+<P>BX = Compteur </P>
+
+<P>CX = Colonne occup&eacute;e par le curseur lorsque le bouton a &eacute;t&eacute;
+enfonc&eacute; pour la </P>
+
+<DIR>
+<DIR>
+<P>derni&egrave;re fois </P>
+</DIR>
+</DIR>
+
+<P>DX = Ligne occup&eacute;e par le curseur lorsque le bouton a &eacute;t&eacute;
+enfonc&eacute; pour la </P>
+
+<DIR>
+<DIR>
+<P>derni&egrave;re fois </P>
+</DIR>
+</DIR>
+</DIR>
+</DIR>
+
+<P>* Vous devez sp&eacute;cifier dans le registre BX sur quel bouton la
+fonction doit porter. Si vous sp&eacute;cifiez la valeur 00h, II s'agira
+du bouton gauche. Si vous sp&eacute;cifiez la valeur 0lh, il s'agira du
+bouton droit. </P>
+
+<P>* Au retour de la fonction, vous pouvez savoir en consultant le registre
+AX si le bouton de la souris est enfonc&eacute; (AX = 0lh) ou rel&acirc;ch&eacute;
+(AX = 00h). </P>
+
+<P>* Le compteur du registre BX indique le nombre de fois o&ugrave; le
+bouton de la souris a &eacute;t&eacute; enfonc&eacute; depuis la derni&egrave;re
+interrogation. </P>
+
+<P>* Les valeurs retourn&eacute;es pour la position du curseur correspondant
+&agrave;<I> </I>la position occup&eacute;e par le curseur sur l'&eacute;cran
+la derni&egrave;re fois que le bouton en question a &eacute;t&eacute; enfonc&eacute;.
+</P>
+
+<P><A NAME="f06"></A><B><I>Fonction 06h - </I>Etat des boutons de la souris
+(rel&acirc;ch&eacute;) </B></P>
+
+<P>Entr&eacute;es : AX = 06h </P>
+
+<DIR>
+<DIR>
+<P>BX = Bouton de la souris </P>
+</DIR>
+</DIR>
+
+<P>Sorties : AX = Etat </P>
+
+<DIR>
+<DIR>
+<P>BX = Compteur </P>
+
+<P>CX = Colonne occup&eacute;e par le curseur lorsque le bouton a &eacute;t&eacute;
+rel&acirc;ch&eacute; pour la </P>
+</DIR>
+</DIR>
+
+<P>derni&egrave;re fois </P>
+
+<DIR>
+<DIR>
+<P>DX = Ligne occup&eacute;e par le curseur lorsque le bouton a &eacute;t&eacute;
+rel&acirc;ch&eacute; pour la </P>
+
+<P>derni&egrave;re fois </P>
+</DIR>
+</DIR>
+
+<P>* Vous devez sp&eacute;cifier dans le registre BX sur quel bouton la
+fonction doit porter. Si vous sp&eacute;cifiez la valeur 00h, II s'agira
+du bouton gauche. Si vous sp&eacute;cifiez la valeur 0lh, Il s'agira du
+bouton droit. </P>
+
+<P>* Au retour de la fonction, vous pouvez savoir en consultant le registre
+AX si le bouton de la souris est enfonc&eacute; (AX = 01h) ou rel&acirc;ch&eacute;
+(AX = 00h). </P>
+
+<P>* Le compteur du registre BX indique le nombre de fois o&ugrave; le
+bouton de la souris a &eacute;t&eacute; enfonc&eacute; depuis la derni&egrave;re
+interrogation. </P>
+
+<P>* les valeurs retourn&eacute;es pour la position du curseur correspondent
+&agrave; la position occup&eacute;e par le curseur sur l'&eacute;cran la
+derni&egrave;re fois que le bouton en question a &eacute;t&eacute; rel&acirc;ch&eacute;.
+</P>
+
+<P><B><I>&nbsp;<A NAME="f07"></A>Fonction 07h</I> - Valeur maximale et
+minimale de colonne </B></P>
+
+<P><B>&nbsp;E</B>ntr&eacute;es : AX = 07h </P>
+
+<DIR>
+<DIR>
+<P>CX = Limite gauche </P>
+
+<P>DX = Limite droite </P>
+</DIR>
+</DIR>
+
+<P>Sorties : Aucune </P>
+
+<P>&nbsp;* Au retour de la fonction, les d&eacute;placements horizontaux
+du pointeur de la souris sont confin&eacute;s aux limites de la zone d&eacute;finie
+par CX:DX. </P>
+
+<P>&nbsp;* La limite gauche repr&eacute;sente la valeur minimale de la
+coordonn&eacute;e X du pointeur tandis que la limite droite repr&eacute;sente
+la valeur maximale de la coordonn&eacute;e X. </P>
+
+<P><A NAME="f08"></A><B><I>Fonction 08h</I> - Valeur maximale et minimale
+de ligne </B></P>
+
+<P>Entr&eacute;es : AX = 08h </P>
+
+<DIR>
+<DIR>
+<P>CX = Limite sup&eacute;rieure </P>
+
+<P>DX = Limite inf&eacute;rieure </P>
+</DIR>
+</DIR>
+
+<P>Sorties : Aucune </P>
+
+<P>* Au retour de la fonction, les d&eacute;placements verticaux du pointeur
+de la souris sont confin&eacute;s aux limites de la zone d&eacute;finie
+par CX:DX.</P>
+
+<P>* La limite sup&eacute;rieure repr&eacute;sente la valeur minimale de
+la coordonn&eacute;e Y du pointeur tandis que la limite inf&eacute;rieure
+repr&eacute;sente la valeur maximale de la coordonn&eacute;e Y. </P>
+
+<P><A NAME="f09"></A><B><I>Fonction 09h</I> - Forme du pointeur graphique
+</B></P>
+
+<P>Entr&eacute;es : AX = 09h </P>
+
+<DIR>
+<DIR>
+<P>BX = D&eacute;placement X du pixel de r&eacute;f&eacute;rence </P>
+
+<P>CX = D&eacute;placement Y de pixel de r&eacute;f&eacute;rence </P>
+
+<P>DX = Adresse du d&eacute;placement du masque </P>
+
+<P>ES = Adresse du segment du masque </P>
+</DIR>
+</DIR>
+
+<P>Sorties : Aucune </P>
+
+<P>* Cette fonction d&eacute;termine la forme du pointeur de la souris
+en mode graphique. </P>
+
+<P>* Les registres ES:DX doivent contenir l'adresse du masque &eacute;cran
+et du masque de pointeur. Ces deux masques doivent se trouver &agrave;
+des adresses m&eacute;moire contigu&euml;s. </P>
+
+<P>* Le masque de pointeur occupe 16 mots en m&eacute;moire. Il d&eacute;termine
+l'aspect du pointeur en mode graphique. La matrice 16 x 16 est interpr&eacute;t&eacute;e
+comme <I>bit-map </I>(mode point) pour le mode vid&eacute;o en cours. Par
+cons&eacute;quent, on peut utiliser plusieurs octets du masque de pointeur
+pour un pixel. </P>
+
+<P>* A l'instar du masque de pointeur, le masque &eacute;cran se compose
+de 16 mots distincts. Avant que la combinaison binaire du masque de pointeur
+soit mise en œuvre, vous pouvez d&eacute;terminer &agrave;<I> </I>l'aide
+du masque &eacute;cran quels pixels devront &ecirc;tre modifi&eacute;s.
+Avant d'afficher le pointeur de l'&eacute;cran, le gestionnaire de souris
+interpr&egrave;te le masque &eacute;cran comme une combinaison binaire
+qui fait l'objet d'une liaison ET logique avec le contenu de l'&eacute;cran.
+</P>
+
+<P>* Les bits d'arri&egrave;re-plan que vous souhaitez modifier &agrave;<I>
+</I>l'aide du masque de pointeur doivent &ecirc;tre cod&eacute;s par un
+bit &eacute;gal &agrave; 0, ceux qui doivent rester intacts doivent &ecirc;tre
+cod&eacute;s par un bit &eacute;gal &agrave; l. Vous devez sp&eacute;cifier
+dans le masque &eacute;cran quels pixels d'arri&egrave;re-plan ne doivent
+pas &ecirc;tre modifi&eacute;s par le pointeur de la souris. </P>
+
+<P>* Le pixel de r&eacute;f&eacute;rence indique quel pixel du pointeur
+le gestionnaire de souris doit utiliser comme r&eacute;f&eacute;rence pour
+les coordonn&eacute;es de la souris. Les coordonn&eacute;es du pixel de
+r&eacute;f&eacute;rence sont des d&eacute;placements par rapport &agrave;<I>
+</I>l'angle sup&eacute;rieur gauche du pointeur de la souris. Elles peuvent
+&ecirc;tre comprises entre -127 et 128 </P>
+
+<P><A NAME="f0a"></A><B><I>Fonction 0Ah - </I>Forme du pointeur texte </B></P>
+
+<P>Entr&eacute;es : AX = 0Ah </P>
+
+<DIR>
+<DIR>
+<P>BX = Type de pointeur </P>
+
+<P>CX = Masque &eacute;cran/ligne de d&eacute;but de l’affichage du pointeur
+</P>
+
+<P>DX = Masque du pointeur/ligne de fin de l'affichage du pointeur </P>
+</DIR>
+</DIR>
+
+<P>Sorties : Aucune </P>
+
+<P>* Vous devez d&eacute;terminer dans le registre BX le type de pointeur
+de souris qui doit &ecirc;tre utilis&eacute; en mode texte. Si BX 00h,
+il s'agira d'un pointeur logiciel ; si BX = 01h, Il s'agira d'un pointeur
+mat&eacute;riel. </P>
+
+<P>* Si vous choisissez le pointeur mat&eacute;riel, Le gestionnaire de
+souris utilisera le pointeur texte standard.</P>
+
+<P>* Pour le pointeur mat&eacute;riel, vous devez d&eacute;finir dans les
+registres CX et DX &agrave; quelle ligne de balayage d'un caract&egrave;re
+l'affichage du curseur doit d&eacute;buter (CX) et &agrave; quelle ligne
+il doit prendre fin (DX). </P>
+
+<P>* Pour le pointeur logiciel, le masque &eacute;cran doit &ecirc;tre
+d&eacute;fini dans le registre CX et le masque de pointeur dans le registre
+DX. </P>
+
+<P><A NAME="f0b"></A><B><I>Fonction 0Bh</I> - Lecture du compteur de d&eacute;placements
+de la souris.</B></P>
+
+<P>Entr&eacute;es : AX = 0Bh </P>
+
+<P>Sorties : CX = Compteur X </P>
+
+<DIR>
+<DIR>
+<P>DX = Compteur Y </P>
+</DIR>
+</DIR>
+
+<P>* Cette fonction retourne le nombre contenu dans les compteurs de mickeys
+pour les coordonn&eacute;es X et Y, depuis le dernier appel de cette fonction.</P>
+
+<P>* Un <I>mickey</I> correspond &agrave; environ l/200<SUP>i&eacute;me</SUP>
+de pouce. </P>
+
+<P>* Les valeurs contenues dans les compteurs peuvent aller de -32768 &agrave;
+32767. </P>
+
+<P><A NAME="f0c"></A><B><I>Fonction 0Ch</I> - D&eacute;finition des masques
+et adresses d'interruption </B></P>
+
+<P>Entr&eacute;es : AX = 0Ch </P>
+
+<P>CX = Masque d'appel </P>
+
+<P>DX = Adresse du d&eacute;placement du gestionnaire </P>
+
+<P>ES = Adresse du segment du gestionnaire </P>
+
+<P>Sorties : Aucune </P>
+
+<P>* Cette fonction permet de d&eacute;finir un nouveau sous-programme
+d'interruption pour les interruptions mat&eacute;rielles de la souris.
+</P>
+
+<P>* La d&eacute;finition d'un nouveau gestionnaire d'interruptions mat&eacute;rielles
+pour la souris permet d'intercepter directement au niveau mat&eacute;riel
+certaines actions r&eacute;alis&eacute;es sur la souris. </P>
+
+<P>* L'adresse du nouveau gestionnaire d'interruptions doit &ecirc;tre
+sp&eacute;cifi&eacute; dans les registres ES:DX. </P>
+
+<P>* Le masque d'appel d&eacute;termin&eacute; dans le registre CX permet
+de sp&eacute;cifier &agrave;<I> </I>quelles occasions le nouveau gestionnaire
+devra &ecirc;tre appel&eacute;. </P>
+
+<P>Le Tableau Fig.2<I> </I>pr&eacute;sente la structure du registre CX
+</P>
+
+<TABLE BORDER=1 CELLPADDING=4 WIDTH="614" BGCOLOR="#C0C0C0" BORDERCOLOR="#000000" >
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P><B>Bits</B></P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">
+<CENTER><P><B>Signification</B></P></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>15-5</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Inutilis&eacute;s </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>4</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Le bouton gauche est rel&acirc;ch&eacute;
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>3</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Le bouton gauche est enfonc&eacute; </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>2</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Le bouton droit est rel&acirc;ch&eacute; </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>l</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Le bouton droit est enfonc&eacute; </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>0</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">La position du pointeur de souris change </TD>
+</TR>
+</TABLE>
+
+<P>&nbsp;T<I>ableau Fig.2 : Le masque d'appel. </I></P>
+
+<P><I>*</I> En mettant &agrave;<I> </I>1 les bits du masque d'appel, vous
+provoquez l'activation du gestionnaire d'interruptions par l'interruption
+mat&eacute;rielle d&egrave;s que les conditions correspondantes se d&eacute;clarent.
+</P>
+
+<P>&nbsp;* Le sous-programme d'interruption ne doit pas se terminer par
+une instruction <I>iret</I> mais par une commande <I>far return. </I></P>
+
+<P>* Lorsque votre gestionnaire d'interruptions est activ&eacute; suite
+&agrave; l'apparition d'une des conditions pr&eacute;vues dans le masque
+d'appel, les registres du processeur poss&egrave;dent les contenus suivants
+(voir Tableau Fig.3). </P>
+
+<TABLE BORDER=1 CELLPADDING=4 WIDTH="614" BGCOLOR="#C0C0C0" BORDERCOLOR="#000000" >
+<TR>
+<TD WIDTH="21%" VALIGN="TOP">
+<CENTER><P><B>Registre</B></P></CENTER>
+</TD>
+
+<TD WIDTH="79%" VALIGN="TOP">
+<CENTER><P><B>Contenu</B></P></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="21%" VALIGN="TOP">
+<CENTER><P>AX</P></CENTER>
+</TD>
+
+<TD WIDTH="79%" VALIGN="TOP">Masque de conditions </TD>
+</TR>
+
+<TR>
+<TD WIDTH="21%" VALIGN="TOP">
+<CENTER><P>BX</P></CENTER>
+</TD>
+
+<TD WIDTH="79%" VALIGN="TOP">Etat des boutons </TD>
+</TR>
+
+<TR>
+<TD WIDTH="21%" VALIGN="TOP">
+<CENTER><P>CX</P></CENTER>
+</TD>
+
+<TD WIDTH="79%" VALIGN="TOP">Coordonn&eacute;e X du pointeur de souris
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="21%" VALIGN="TOP">
+<CENTER><P>DX</P></CENTER>
+</TD>
+
+<TD WIDTH="79%" VALIGN="TOP">Coordonn&eacute;e Y du pointeur de souris
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="21%" VALIGN="TOP">
+<CENTER><P>SI</P></CENTER>
+</TD>
+
+<TD WIDTH="79%" VALIGN="TOP">Compteur de <I>mickeys</I> X </TD>
+</TR>
+
+<TR>
+<TD WIDTH="21%" VALIGN="TOP">
+<CENTER><P>DI</P></CENTER>
+</TD>
+
+<TD WIDTH="79%" VALIGN="TOP">Compteur de <I>mickeys</I> Y </TD>
+</TR>
+</TABLE>
+
+<P>&nbsp;<I>Tableau Fig.3 : La structure des registres apr&egrave;s appel
+du gestionnaire</I> <I>d'interruptions. </I></P>
+
+<P>* Le masque de conditions vous permet de savoir quelle condition est
+&agrave; l'origine de l'activation du gestionnaire d'interruptions. Sa
+structure est identique &agrave; celle du masque d'appel. Lorsque le bit
+correspondant &agrave; une condition est &eacute;gal &agrave; 1, cela signifie
+que cette condition a entra&icirc;n&eacute;e la mise en œuvre du gestionnaire.
+</P>
+
+<P><A NAME="f0d"></A><B><I>Fonction 0Dh</I> - Activation de l'&eacute;mulation
+du crayon optique </B></P>
+
+<P>Entr&eacute;es : AX = 0Dh </P>
+
+<P>Sorties : Aucune </P>
+
+<P>* Au retour de cette fonction, le gestionnaire de la souris &eacute;mule
+un crayon optique. </P>
+
+<P>* Pour simuler une pression sur le crayon optique, vous devez appuyer
+simultan&eacute;ment sur les deux boutons de la souris. </P>
+
+<P><A NAME="f0e"></A><B><I>Fonction 0Eh</I> - D&eacute;sactivation de l'&eacute;mulation
+du crayon optique </B></P>
+
+<P>Entr&eacute;es : AX = 0Eh </P>
+
+<P>Sorties : Aucune </P>
+
+<P>* Au retour de cette fonction, le gestionnaire de la souris cesse d'&eacute;muler
+le crayon optique. </P>
+
+<P><A NAME="f0f"></A><B><I>Fonction 0Fh</I> - D&eacute;finition du rapport</B>
+<I>mickeys / pixels </I></P>
+
+<P>Entr&eacute;es : AX = 0Fh </P>
+
+<DIR>
+<DIR>
+<DIR>
+<DIR>
+<P>CX = Rapport X </P>
+</DIR>
+</DIR>
+
+<P>DX = Rapport Y </P>
+</DIR>
+</DIR>
+
+<P>Sorties : Aucune</P>
+
+<P>* Cette fonction d&eacute;termine le rapport entre l'unit&eacute; de
+mesure des d&eacute;placements de la souris (le <I>mickey</I>) et le d&eacute;placement
+du pointeur de la souris &agrave; l'&eacute;cran. </P>
+
+<P>* Le param&egrave;tre sp&eacute;cifi&eacute; dans CX d&eacute;finit
+le rapport entre les pixels horizontaux sur huit mickeys. </P>
+
+<P>* Le param&egrave;tre sp&eacute;cifi&eacute; dans DX d&eacute;finit
+le rapport entre les pixels verticaux sur huit mickeys. </P>
+
+<P>* Les valeurs dans CX et DX doivent &ecirc;tre comprises entre l et
+32 767. </P>
+
+<P>* Le rapport standard est 8 sur 16. </P>
+
+<P>* Les donn&eacute;es sp&eacute;cifi&eacute;es pour les pixels sont bas&eacute;es
+sur l'&eacute;cran virtuel. </P>
+
+<P>* Lorsque l'on augmente la valeur du mickey par rapport &agrave;<I>
+</I>celle du pixel, les d&eacute;placements de la souris sont plus lents
+; si on la diminue, les d&eacute;placements sont plus rapides.<FONT SIZE=-2>
+</FONT></P>
+
+<P><A NAME="f10"></A><B><I>Fonction 10h - </I>D&eacute;sactivation conditionnelle
+de l’affichage du pointeur de souris </B></P>
+
+<P>Entr&eacute;es : AX = 10h </P>
+
+<DIR>
+<DIR>
+<P>CX = Coordonn&eacute;e X droite </P>
+
+<P>DX = Coordonn&eacute;e Y inf&eacute;rieure </P>
+
+<P>SI = Coordonn&eacute;e X gauche </P>
+
+<P>DI = Coordonn&eacute;e Y sup&eacute;rieure </P>
+</DIR>
+</DIR>
+
+<P>Sorties : aucune </P>
+
+<P>* Cette fonction d&eacute;limite une zone sur l'&eacute;cran virtuel.
+</P>
+
+<P>* Le gestionnaire de souris d&eacute;sactive l'affichage du pointeur
+de la souris d&egrave;s qu'il se trouve dans la zone sp&eacute;cifi&eacute;e.
+</P>
+
+<P>* Les param&egrave;tres d&eacute;finissent une zone rectangulaire sur
+l'&eacute;cran. </P>
+
+<P>* Cette fonction a pour objet de modifier certaines zones de l'&eacute;cran
+sans se pr&eacute;occuper du pointeur de la souris. Vous pouvez d&eacute;limiter
+une zone &agrave; l'aide de cette fonction puis la manipuler &agrave; votre
+gr&eacute;. </P>
+
+<P>* Si le pointeur de la souris est d&eacute;sactiv&eacute;, seul l'appel
+de la fonction 0lh permettra de l'activer de nouveau. </P>
+
+<P><A NAME="f13"></A><B><I>Fonction 13h</I> - Point de d&eacute;part pour
+la double vitesse </B></P>
+
+<P>Entr&eacute;es : AX = 13h </P>
+
+<P>DX = Valeur limite </P>
+
+<P>Sorties : Aucune </P>
+
+<P>* Cette fonction permet de d&eacute;terminer la valeur qui servira de
+point de d&eacute;part du mode double vitesse lors des d&eacute;placements
+de la souris. </P>
+
+<P>* Le param&egrave;tre du registre DX &eacute;tablit le nombre de mickeys
+par seconde que doit parcourir la souris lorsqu'elle passe en mode double
+vitesse. </P>
+
+<P>* La valeur standard utilis&eacute;e par le gestionnaire est 64. </P>
+
+<P>* Pour d&eacute;sactiver le mode double vitesse, appelez cette fonction
+en sp&eacute;cifiant une valeur physiquement impossible &agrave; atteindre,
+telle que 4000h. </P>
+
+<P><A NAME="f14"></A><B><I>Fonction 14h</I> - Lecture et modification des
+masques et des adresses d'interruption </B></P>
+
+<P>Entr&eacute;es : AX = 14h </P>
+
+<DIR>
+<DIR>
+<P>ES = Adresse du segment du gestionnaire d'interruptions </P>
+
+<P>CX = Masque d'appel </P>
+
+<P>DX = Adresse du d&eacute;placement du gestionnaire d'interruptions </P>
+</DIR>
+</DIR>
+
+<P>Sorties : ES = Adresse du segment de l'ancien gestionnaire d'interruptions
+</P>
+
+<DIR>
+<DIR>
+<P>CX = Adresse masque d'appel </P>
+
+<P>DX = Adresse du d&eacute;placement de l'ancien gestionnaire d'interruptions
+</P>
+</DIR>
+</DIR>
+
+<P>* Cette fonction permet de d&eacute;finir un nouveau sous-programme
+d'interruption pour les interruptions mat&eacute;rielles de la souris et
+d&eacute;termine l'adresse du gestionnaire d'interruptions en cours ainsi
+que celle du masque d'appel correspondant. </P>
+
+<P>* Le masque d'appel d&eacute;termin&eacute; dans le registre CX permet
+de sp&eacute;cifier &agrave; quelles occasions le nouveau gestionnaire
+devra &ecirc;tre appel&eacute;. </P>
+
+<P>Le Tableau Fig.4 pr&eacute;sente la structure du registre CX. </P>
+
+<TABLE BORDER=1 CELLPADDING=4 WIDTH="614" BGCOLOR="#C0C0C0" BORDERCOLOR="#000000" >
+<TR>
+<TD WIDTH="10%" VALIGN="TOP">
+<CENTER><P><B>Bits</B></P></CENTER>
+</TD>
+
+<TD WIDTH="90%" VALIGN="TOP">
+<CENTER><P><B>Signification</B></P></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="10%" VALIGN="TOP">
+<CENTER><P>15-5</P></CENTER>
+</TD>
+
+<TD WIDTH="90%" VALIGN="TOP">Inutilis&eacute;s </TD>
+</TR>
+
+<TR>
+<TD WIDTH="10%" VALIGN="TOP">
+<CENTER><P>4</P></CENTER>
+</TD>
+
+<TD WIDTH="90%" VALIGN="TOP">Le bouton gauche est rel&acirc;ch&eacute;
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="10%" VALIGN="TOP">
+<CENTER><P>3</P></CENTER>
+</TD>
+
+<TD WIDTH="90%" VALIGN="TOP">le bouton gauche est enfonc&eacute; </TD>
+</TR>
+
+<TR>
+<TD WIDTH="10%" VALIGN="TOP">
+<CENTER><P>2</P></CENTER>
+</TD>
+
+<TD WIDTH="90%" VALIGN="TOP">Le bouton droit est rel&acirc;ch&eacute; </TD>
+</TR>
+
+<TR>
+<TD WIDTH="10%" VALIGN="TOP">
+<CENTER><P>l</P></CENTER>
+</TD>
+
+<TD WIDTH="90%" VALIGN="TOP">Le bouton droit est enfonc&eacute; </TD>
+</TR>
+
+<TR>
+<TD WIDTH="10%" VALIGN="TOP">
+<CENTER><P>0</P></CENTER>
+</TD>
+
+<TD WIDTH="90%" VALIGN="TOP">La position du pointeur de souris change </TD>
+</TR>
+</TABLE>
+
+<P><I>Tableau Fig.4 : Le masque d'appel. </I></P>
+
+<P>* En mettant &agrave;<I> </I>1 les bits du masque d'appel, vous provoquez
+l'activation du gestionnaire d'interruptions par l’interruption mat&eacute;rielle
+d&egrave;s que les conditions correspondantes se d&eacute;clarent. </P>
+
+<P>* Le sous-programme d’interruptions ne doit pas se terminer par une
+instruction <I>iret </I>mais par un <I>far return</I> </P>
+
+<P>* Lorsque le gestionnaire d'interruptions est activ&eacute; suite &agrave;<I>
+</I>l'apparition d'une des conditions pr&eacute;vues dans le masque d'appel,
+les registres du processeur poss&egrave;dent les contenus pr&eacute;sent&eacute;s
+au Tableau Fig.5. </P>
+
+<TABLE BORDER=1 CELLPADDING=4 WIDTH="614" BGCOLOR="#C0C0C0" BORDERCOLOR="#000000" >
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P><B>Registre</B></P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">
+<CENTER><P><B>Contenu</B></P></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>AX</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Masque de condition </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>BX</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Etat des boutons </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>CX</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Coordonn&eacute;e X du pointeur de souris
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>DX</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Coordonn&eacute;e Y du pointeur de souris
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>SI</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Compteur de mickeys X </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>DI</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Compteur de mickeys Y </TD>
+</TR>
+</TABLE>
+
+<P>&nbsp;<I>Tableau Fig.5 : la structure des registres apr&egrave;s appel
+du gestionnaire d'interruptions</I>. </P>
+
+<P>&nbsp;* Le masque de conditions vous permet de savoir quelle condition
+est &agrave; l'origine de l'activation du gestionnaire d'interruptions.
+Sa structure est identique &agrave; celle du masque d'appel. Lorsque le
+bit correspondant &agrave; une condition est &eacute;gal &agrave;<I> </I>1,
+cela signifie que cette condition a entra&icirc;n&eacute; la mise en œuvre
+du gestionnaire. </P>
+
+<P>&nbsp;* Cette fonction retourne comme param&egrave;tres l'adresse du
+gestionnaire d'interruptions utilis&eacute; jusque-l&agrave; ainsi que
+celle du masque d'appel correspondant.</P>
+
+<P>&nbsp;<A NAME="f15"></A><B><I>Fonction 15h </I>- Taille du tampon pour
+l'&eacute;tat du gestionnaire de la souris </B></P>
+
+<P>Entr&eacute;es : AX = 15h </P>
+
+<P>Sortie : BX = Taille du tampon de stockage des informations relatives
+&agrave; l'&eacute;tat du </P>
+
+<P>gestionnaire </P>
+
+<P>* Cette fonction d&eacute;termine la taille du tampon de m&eacute;moire
+n&eacute;cessaire pour prendre en charge toutes les informations relatives
+&agrave; l'&eacute;tat du gestionnaire de la souris. </P>
+
+<P>* Vous pouvez appeler cette fonction avant de proc&eacute;der &agrave;<I>
+</I>l'ex&eacute;cution de la fonction 16h ou 17h de mani&egrave;re &agrave;
+calculer la taille du tampon n&eacute;cessaire. </P>
+
+<P><A NAME="f16"></A><B><I>Fonction 16H</I> - Enregistrement de l'&eacute;tat
+du gestionnaire de souris </B></P>
+
+<P>Entr&eacute;es : AX = 16h </P>
+
+<DIR>
+<DIR>
+<P>ES = Adresse du segment du tampon </P>
+
+<P>DX =Adresse du d&eacute;placement du tampon </P>
+</DIR>
+</DIR>
+
+<P>Sorties : Aucune </P>
+
+<P>* Cette fonction permet d'enregistrer toutes les informations relatives
+&agrave;<I> </I>l'&eacute;tat du gestionnaire de la souris dans une zone
+tampon. </P>
+
+<P>* Le tampon doit avoir une capacit&eacute; suffisante pour accueillir
+toutes les informations. Vous pouvez d&eacute;terminer la taille n&eacute;cessaire
+en appelant la fonction 15h. </P>
+
+<P><A NAME="f17"></A><B><I>Fonction 17H</I> - Restaurer l'&eacute;tat du
+gestionnaire de souris </B></P>
+
+<P>Entr&eacute;e : AX = 17h </P>
+
+<DIR>
+<DIR>
+<P>ES = Adresse du segment du tampon </P>
+
+<P>DX = Adresse du d&eacute;placement du tampon </P>
+</DIR>
+</DIR>
+
+<P>Sortie : Aucune </P>
+
+<P>* Cette fonction permet de restaurer l'&eacute;tat du gestionnaire de
+souris enregistr&eacute; dans le tampon. </P>
+
+<P>* L'enregistrement des informations relatives &agrave;<I> </I>l'&eacute;tat
+du gestionnaire s'effectue &agrave;<I> </I>l'aide de la fonction 16h. </P>
+
+<P><A NAME="f18"></A><B><I>Fonction 18h</I> - Masques et adresses d'interruption
+&eacute;tendus </B></P>
+
+<P>Entr&eacute;es : AX = 18h </P>
+
+<DIR>
+<DIR>
+<P>CX = Masque d'appel &eacute;tendu </P>
+
+<P>DX = Adresse du d&eacute;placement du gestionnaire d'interruptions </P>
+</DIR>
+</DIR>
+
+<P>Sorties : ES = Adresse du segment du gestionnaire d'interruptions </P>
+
+<DIR>
+<DIR>
+<P>AX = Code d'&eacute;tat </P>
+</DIR>
+</DIR>
+
+<P>* Cette fonction est analogue &agrave; la fonction 0Ch &agrave;<I> </I>ceci
+pr&egrave;s qu'elle permet de d&eacute;finir des conditions faisant intervenir
+des combinaisons de boutons de la souris avec certaines touches du clavier.
+</P>
+
+<P>* Le masque d'appel &eacute;tendu permet de sp&eacute;cifier &agrave;
+quelles occasions le nouveau gestionnaire devra &ecirc;tre appel&eacute;.
+Le tableau Fig.6 pr&eacute;sente la structure du masque d'appel &eacute;tendu.
+</P>
+
+<TABLE BORDER=1 CELLPADDING=4 WIDTH="614" BGCOLOR="#C0C0C0" BORDERCOLOR="#000000" >
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P><B>Bits</B></P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">
+<CENTER><P><B>Signification</B></P></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>15-8</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Inutilis&eacute;s </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>7</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">La touche Alt est enfonc&eacute;e et le bouton
+de la souris enfonc&eacute;/rel&acirc;ch&eacute; </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>6</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">La touche Ctrl est enfonc&eacute;e et le bouton
+de la souris enfonc&eacute;/rel&acirc;ch&eacute; </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>5</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">La touche Majuscules est enfonc&eacute;e et
+le bouton de la souris enfonc&eacute;/rel&acirc;ch&eacute; </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>4</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Le bouton gauche est rel&acirc;ch&eacute;
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>3</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Le bouton gauche est enfonc&eacute; </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>2</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Le bouton droit est rel&acirc;ch&eacute; </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>1</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Le bouton droit est enfonc&eacute;. </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>0</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">La position du pointeur de souris change </TD>
+</TR>
+</TABLE>
+
+<P><I>Tableau Fig.6 : Le masque d'appel &eacute;tendu. </I></P>
+
+<P>* En mettant &agrave;<I> </I>1 l'un des bits du masque d'appel &eacute;tendu,
+vous sp&eacute;cifiez que le gestionnaire d'interruptions doit effectuer
+un branchement sur le nouveau sous-progranme d'interruption lorsque la
+condition correspondante se pr&eacute;sente.</P>
+
+<P>* Le nouveau sous-programme d'interruption dont vous sp&eacute;cifiez
+l'adresse dans les registres ES:DX doit se terminer par un <I>far return.
+</I></P>
+
+<P>* Lorsque votre gestionnaire d'interruptions est activ&eacute; suite
+&agrave; l'apparition d'une des conditions pr&eacute;vues dans le masque
+d'appel &eacute;tendu, les registres du processeur poss&egrave;dent les
+contenus pr&eacute;sent&eacute; au Tableau Fig.7. </P>
+
+<TABLE BORDER=1 CELLPADDING=4 WIDTH="614" BGCOLOR="#C0C0C0" BORDERCOLOR="#000000" >
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>&nbsp;<B>Registre</B></P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">
+<CENTER><P><B>Contenu</B></P></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>AX</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">Masque de conditions </TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>BX</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">Etat des boutons</TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>CX</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">Coordonn&eacute;e X du pointeur de souris
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>DX</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">Coordonn&eacute;e Y du pointeur de souris
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>SI</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">Compteur de mickeys X </TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>DI</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">Compteur de mickeys Y </TD>
+</TR>
+</TABLE>
+
+<P><I>Tableau Fig.7: La structure des registres apr&egrave;s appel du gestionnaire
+d'interruption</I>. </P>
+
+<P>* Le masque de conditions vous permet de savoir quelle condition est
+&agrave; l'origine de l'activation du gestionnaire d'interruptions. Sa
+structure est identique &agrave; celle du masque d'appel lorsque le bit
+correspondant &agrave;<I> </I>une condition est &eacute;gal &agrave; 1,
+cela signifie que cette condition a entra&icirc;n&eacute; la mise en œuvre
+du gestionnaire. </P>
+
+<P>* Le nombre maximal de sous-programmes d'interruption que vous pouvez
+installer simultan&eacute;ment gr&acirc;ce &agrave; cette fonction est
+Limit&eacute; &agrave; 3. En outre, le masque d'appel mis en œuvre doit
+&ecirc;tre diff&eacute;rent d'un sous-programme &agrave; un autre. Cela
+vous permet d'ailleurs d'intercepter diff&eacute;rentes actions souris
+dans plusieurs proc&eacute;dures diff&eacute;rentes.</P>
+
+<P><A NAME="f19"></A><B><I>Fonction 19h - </I>Lecture d'adresses d'interruption
+&eacute;tendues </B></P>
+
+<P>Entr&eacute;es : AX = 19h </P>
+
+<DIR>
+<DIR>
+<P>CX = Masque d'appel recherch&eacute; </P>
+</DIR>
+</DIR>
+
+<P>Sorties : AX = Code d'erreur </P>
+
+<DIR>
+<DIR>
+<P>BX = Adresse du segment du gestionnaire d'interruptions </P>
+
+<P>CX = Masque d'appel effectif </P>
+
+<P>DX = Adresse du d&eacute;placement du gestionnaire d’interruptions </P>
+</DIR>
+</DIR>
+
+<P>* Cette fonction d&eacute;termine l'adresse d'un gestionnaire d'interruptions
+d&eacute;fini par un programme. Ce gestionnaire sera mis en œuvre d&egrave;s
+qu'une certaine action concernant la souris aura lieu. </P>
+
+<P>* Vous devez sp&eacute;cifier dans le registre CX &agrave; quelle action
+est associ&eacute; le gestionnaire d'interruptions dont vous voulez conna&icirc;tre
+l'adresse (voir Tableau Fig.8). </P>
+
+<TABLE BORDER=1 CELLPADDING=4 WIDTH="614" BGCOLOR="#C0C0C0" BORDERCOLOR="#000000" >
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P><B>Bits</B></P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">
+<CENTER><P><B>Signification</B></P></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>15-8</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">Inutilis&eacute; </TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>7</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">La touche Alt est enfonc&eacute;e et le bouton
+de la souris enfonc&eacute;/rel&acirc;ch&eacute; </TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>6</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">La touche Ctrl est enfonc&eacute;e et le bouton
+de la souris enfonc&eacute;/rel&acirc;ch&eacute; </TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>5</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">La touche Majuscules est enfonc&eacute;e et
+le bouton de la souris enfonc&eacute;/rel&acirc;ch&eacute; </TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>4</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">Le bouton gauche est rel&acirc;ch&eacute;
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>3</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">Le bouton gauche est enfonc&eacute; </TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>2</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">Le bouton droit est rel&acirc;ch&eacute; Le
+bouton droit est enfonc&eacute; </TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>0</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">La position du pointeur de souris change </TD>
+</TR>
+</TABLE>
+
+<P>&nbsp;T<I>ableau Fig.8 : Le masque d'appel &eacute;tendu. </I></P>
+
+<P>&nbsp;* En mettant &agrave; l l'un des bits du masque d'appel &eacute;tendu,
+vous sp&eacute;cifiez que vous voulez conna&icirc;tre l'adresse du gestionnaire
+d'interruptions pour l'action correspondante. </P>
+
+<P>&nbsp;* Cette fonction retourne dans les registre BX:DX l'adresse du
+gestionnaire d'interruptions correspondant &agrave; l'action sp&eacute;cifi&eacute;e
+dans le masque d'appel (celle dont le bit est &eacute;gal &agrave;<I> </I>1).
+</P>
+
+<P>&nbsp;* Cette fonction place dans le registre CX le masque d'appel associ&eacute;
+au gestionnaire d'interruptions (voir Tableau Fig.8). </P>
+
+<P>&nbsp;<A NAME="f1a"></A><B><I>Fonction 1Ah - </I>Modification de la
+sensibilit&eacute; de la souris </B></P>
+
+<P><B>&nbsp;</B>Entr&eacute;es : AX = 1Ah </P>
+
+<DIR>
+<DIR>
+<P>BX = Sensibilit&eacute; X </P>
+
+<P>CX = Sensibilit&eacute; Y </P>
+
+<P>DX = Point de d&eacute;part de la double vitesse </P>
+</DIR>
+</DIR>
+
+<P>Sorties : Aucune </P>
+
+<P>&nbsp;* Cette fonction d&eacute;termine via les registres BX et CX la
+sensibilit&eacute; de la souris &agrave; l'&eacute;cran. </P>
+
+<P>&nbsp;* La sensibilit&eacute; de la souris se mesure comme un rapport
+entre les pixels et les mickeys. </P>
+
+<P>&nbsp;* Une sensibilit&eacute; &eacute;gale &agrave; 50 correspond au
+facteur mickey standard 1. </P>
+
+<P>&nbsp;* Le param&egrave;tre sp&eacute;cifi&eacute; dans DX vous permet
+d'indiquer la valeur limite &agrave; partir de laquelle le gestionnaire
+de la souris doit activer le mode double vitesse. La valeur que contient
+le registre DX exprime le nombre de mickeys par seconde auquel correspond
+le mode double vitesse. </P>
+
+<P>&nbsp;* La valeur standard utilis&eacute;e par le gestionnaire de souris
+est 50. </P>
+
+<P>&nbsp;<A NAME="f1b"></A><B><I>Fonction 1Bh - </I>Lecture de la sensibilit&eacute;
+de la souris </B></P>
+
+<P>Entr&eacute;es : AX = 1Bh </P>
+
+<DIR>
+<DIR>
+<P>BX = Sensibilit&eacute; X </P>
+
+<P>CX = Sensibilit&eacute; Y </P>
+
+<P>DX = Point de d&eacute;part de la double vitesse </P>
+</DIR>
+</DIR>
+
+<P>Sorties : Aucune </P>
+
+<P>* Cette fonction d&eacute;termine via les registres BX et CX la sensibilit&eacute;
+de la souris &agrave; l'&eacute;cran. </P>
+
+<P>* La sensibilit&eacute; de la souris est le rapport entre le pixels
+et les mickeys. </P>
+
+<P>* Une sensibilit&eacute; &eacute;gale &agrave; 50 correspond au facteur
+<I>mickeys </I>standard l. </P>
+
+<P>* Le param&egrave;tre sp&eacute;cifi&eacute; dans DX vous permet d'indiquer
+la valeur limite &agrave; partir de laquelle le gestionnaire de la souris
+doit activer le mode double vitesse. la valeur que contient le registre
+DX exprime le nombre de mickeys par seconde auquel correspond le mode double
+vitesse. </P>
+
+<P>* La valeur standard utilis&eacute;e par le gestionnaire de souris est
+50. </P>
+
+<P><A NAME="f1c"></A><B><I>Fonction 1Ch - </I>Fr&eacute;quence d'interruption
+de la souris</B></P>
+
+<P>Entr&eacute;es : AX = 1Ch </P>
+
+<DIR>
+<DIR>
+<P>BX = Fr&eacute;quence d'interruption </P>
+</DIR>
+</DIR>
+
+<P>Sorties : Aucune </P>
+
+<P>* Cette fonction permet de d&eacute;terminer la fr&eacute;quence &agrave;
+laquelle le gestionnaire de la souris interrogera cette derni&egrave;re.
+</P>
+
+<P>* La fr&eacute;quence d'interruption sp&eacute;cifie le nombre d'interrogations
+de la souris par seconde. Les valeurs possibles sont comprises entre 00h
+et 04h. Le Tableau Fig.9 d&eacute;crit en d&eacute;tail ces diff&eacute;rentes
+valeurs. </P>
+
+<P>* Cette fonction ne peut &ecirc;tre utilis&eacute;e que pour les souris
+Import. </P>
+
+<TABLE BORDER=1 CELLPADDING=4 WIDTH="614" BGCOLOR="#C0C0C0" BORDERCOLOR="#000000" >
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P><B>Code</B></P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">
+<CENTER><P><B>Fr&eacute;quence</B></P></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>00h</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Aucune interrogation </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>01h</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">30 interrogations par seconde </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>02h</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">50 interrogations par seconde </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>03h</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">100 interrogations par seconde </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>04h</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">200 interrogations par seconde </TD>
+</TR>
+</TABLE>
+
+<P><I>Tableau Fig.9 : Les code</I> <I>de fr&eacute;quence d'interruption.</I></P>
+
+<P><A NAME="f1d"></A><I><B>Fonction 1Dh - </B>D&eacute;finition du num&eacute;ro
+de la page &eacute;cran </I></P>
+
+<P>Entr&eacute;es : AX = 1Dh </P>
+
+<DIR>
+<DIR>
+<P>BX = Page &eacute;cran </P>
+</DIR>
+</DIR>
+
+<P>Sorties : Aucune </P>
+
+<P>* Cette fonction d&eacute;termine le num&eacute;ro de la page &eacute;cran
+sur laquelle doit appara&icirc;tre le pointeur de la souris. </P>
+
+<P>* Le nombre de pages &eacute;cran autoris&eacute; varie en fonction
+du mode vid&eacute;o en cours et de la carte graphique install&eacute;.
+</P>
+
+<P><A NAME="f1e"></A><B><I>Fonction 1Eh</I> - Lecture du num&eacute;ro
+de la page &eacute;cran </B></P>
+
+<P>Entr&eacute;es : AX = 1Eh </P>
+
+<P>Sorties : BX = Page &eacute;cran </P>
+
+<P>* Cette fonction retourne le num&eacute;ro de la page &eacute;cran sur
+laquelle se trouve actuellement le pointeur de la souris. </P>
+
+<P>* Le nombre de pages &eacute;cran autoris&eacute; varie en fonction
+du mode vid&eacute;o en cours et de la carte graphique install&eacute;e.
+</P>
+
+<P><A NAME="f1f"></A><B><I>Fonction 1Fh - </I>D&eacute;sactiver le gestionnaire
+de souris </B></P>
+
+<P>Entr&eacute;es : AX = 1Fh </P>
+
+<P>Sorties : AX = Code d'erreur </P>
+
+<DIR>
+<DIR>
+<P>BX = Adresse du d&eacute;placement de l'interruption 33h </P>
+
+<P>CX = Adresse du segment de l'interruption 33h </P>
+</DIR>
+</DIR>
+
+<P>* Cette fonction d&eacute;sactive le gestionnaire de souris </P>
+
+<P>* Elle retourne dans les registres CX:BX l'adresse du gestionnaire d'interruption
+d&eacute;sactiv&eacute;. </P>
+
+<P>* Lorsqu'il s'av&egrave;re impossible de d&eacute;sactiver le gestionnaire
+d'interruption, la fonction vous le fait savoir en pla&ccedil;ant le code
+d'erreur FFFFh dans le registre AX. </P>
+
+<P><A NAME="f20"></A><B><I>Fonction 20h - </I>Activer le gestionnaire de
+souris </B></P>
+
+<P>Entr&eacute;es : AX = 20h </P>
+
+<P>Sorties : Aucune </P>
+
+<P>* Cette fonction active le gestionnaire de souris. </P>
+
+<P>* Vous devez appeler cette fonction si vous voulez activer un gestionnaire
+de souris que vous avez d&eacute;sactiv&eacute; &agrave;<I> </I>l'aide
+de la fonction 1Fh. </P>
+
+<P><A NAME="f21"></A><B><I>Fonction 21h</I> - R&eacute;initialisation logiciel
+</B></P>
+
+<P>Entr&eacute;s : AX = 21h </P>
+
+<P>Sorties : AX = Code d'erreur </P>
+
+<DIR>
+<DIR>
+<P>BX = 02h </P>
+</DIR>
+</DIR>
+
+<P>* Cette fonction ex&eacute;cute une r&eacute;initialisation logicielle
+du gestionnaire de souris, et entra&icirc;ne par cons&eacute;quent une
+restauration des param&egrave;tres standard. </P>
+
+<P>* Le code d'erreur retourn&eacute; dans le registre AX vous permet de
+savoir si un gestionnaire de souris est install&eacute;. S'il est &eacute;gal
+&agrave;<I> </I>FFFFh, un gestionnaire de souris est install&eacute; ;
+par contre, s'il est &eacute;gal &agrave; 21h, aucun gestionnaire de souris
+n'est install&eacute;. </P>
+
+<P>* Si un gestionnaire de souris est install&eacute;, la fonction retourne
+la valeur 02h dans le registre BX, si la valeur que contient BX est diff&eacute;rente
+de 02h ou celle que contient AX diff&eacute;rente de FFFFh, aucun gestionnaire
+de souris standard n'est install&eacute;. </P>
+
+<P>* La fonction r&eacute;initialise le gestionnaire en lui attribuant
+les param&egrave;tres pr&eacute;sent&eacute;s au Tableau Fig.10.</P>
+
+<P>&nbsp;</P>
+
+<TABLE BORDER=1 CELLPADDING=4 WIDTH="614" BGCOLOR="#C0C0C0" BORDERCOLOR="#000000" >
+<TR>
+<TD WIDTH="33%" VALIGN="TOP">
+<CENTER><P><B>Param&egrave;tre</B></P></CENTER>
+</TD>
+
+<TD WIDTH="67%" VALIGN="TOP">
+<CENTER><P><B>Valeur standard</B></P></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="33%" VALIGN="TOP">Position</TD>
+
+<TD WIDTH="67%" VALIGN="TOP">Centre de l'&eacute;cran </TD>
+</TR>
+
+<TR>
+<TD WIDTH="33%" VALIGN="TOP">Indicateur du curseur</TD>
+
+<TD WIDTH="67%" VALIGN="TOP">FFFFh (curseur d&eacute;sactiv&eacute;) </TD>
+</TR>
+
+<TR>
+<TD WIDTH="33%" VALIGN="TOP">Curseur graphique</TD>
+
+<TD WIDTH="67%" VALIGN="TOP">Fl&egrave;che </TD>
+</TR>
+
+<TR>
+<TD WIDTH="33%" VALIGN="TOP">Curseur texte</TD>
+
+<TD WIDTH="67%" VALIGN="TOP">Rectangle </TD>
+</TR>
+
+<TR>
+<TD WIDTH="33%" VALIGN="TOP">Masque d'interruption</TD>
+
+<TD WIDTH="67%" VALIGN="TOP">0000h (aucune interruption) </TD>
+</TR>
+
+<TR>
+<TD WIDTH="33%" VALIGN="TOP">Crayon optique</TD>
+
+<TD WIDTH="67%" VALIGN="TOP">Pas d'&eacute;mulation </TD>
+</TR>
+
+<TR>
+<TD WIDTH="33%" VALIGN="TOP">Rapport horizontal</TD>
+
+<TD WIDTH="67%" VALIGN="TOP">8 sur 8 </TD>
+</TR>
+
+<TR>
+<TD WIDTH="33%" VALIGN="TOP">Rapport vertical</TD>
+
+<TD WIDTH="67%" VALIGN="TOP">16 sur 8 </TD>
+</TR>
+
+<TR>
+<TD WIDTH="33%" VALIGN="TOP">Vitesse double</TD>
+
+<TD WIDTH="67%" VALIGN="TOP">16 mickeys par seconde </TD>
+</TR>
+
+<TR>
+<TD WIDTH="33%" VALIGN="TOP">Valeur minimale de colonne</TD>
+
+<TD WIDTH="67%" VALIGN="TOP">0000h </TD>
+</TR>
+
+<TR>
+<TD WIDTH="33%" VALIGN="TOP">Valeur minimale de ligne</TD>
+
+<TD WIDTH="67%" VALIGN="TOP">0000h </TD>
+</TR>
+
+<TR>
+<TD WIDTH="33%" VALIGN="TOP">Valeur maximale de Colonne</TD>
+
+<TD WIDTH="67%" VALIGN="TOP">Valeur X maximale - l </TD>
+</TR>
+
+<TR>
+<TD WIDTH="33%" VALIGN="TOP">Valeur maximale de ligne</TD>
+
+<TD WIDTH="67%" VALIGN="TOP">Valeur Y maximale - l </TD>
+</TR>
+
+<TR>
+<TD WIDTH="33%" VALIGN="TOP">Num&eacute;ro de page</TD>
+
+<TD WIDTH="67%" VALIGN="TOP">00h </TD>
+</TR>
+</TABLE>
+
+<P><I>Tableau Fig.10 : Les valeurs de r&eacute;glage de la</I> <I>souris.
+</I></P>
+
+<P><A NAME="f22"></A><I><B>Fonction 22h</B> - Langue utilis&eacute;e<B>
+</B></I></P>
+
+<P>Entr&eacute;es : AX = 22h </P>
+
+<DIR>
+<DIR>
+<P>BX = Langue </P>
+</DIR>
+</DIR>
+
+<P>Sorties : Aucune </P>
+
+<P>* Cette fonction d&eacute;termine la langue que le gestionnaire de souris
+doit utiliser lorsqu'il affiche des messages ou des conseils &agrave; l'&eacute;cran.
+</P>
+
+<P>* le code de la langue voulue doit &ecirc;tre sp&eacute;cifi&eacute;
+dans le registre BX (voir Tableau Fig.11). </P>
+
+<TABLE BORDER=1 CELLPADDING=4 WIDTH="614" BGCOLOR="#C0C0C0" BORDERCOLOR="#000000" >
+<TR>
+<TD WIDTH="10%" VALIGN="TOP">
+<CENTER><P><B>Code</B></P></CENTER>
+</TD>
+
+<TD WIDTH="90%" VALIGN="TOP">
+<CENTER><P><B>Langue</B></P></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="10%" VALIGN="TOP">
+<CENTER><P>00h</P></CENTER>
+</TD>
+
+<TD WIDTH="90%" VALIGN="TOP">Anglais </TD>
+</TR>
+
+<TR>
+<TD WIDTH="10%" VALIGN="TOP">
+<CENTER><P>01h</P></CENTER>
+</TD>
+
+<TD WIDTH="90%" VALIGN="TOP">Fran&ccedil;ais </TD>
+</TR>
+
+<TR>
+<TD WIDTH="10%" VALIGN="TOP">
+<CENTER><P>02h</P></CENTER>
+</TD>
+
+<TD WIDTH="90%" VALIGN="TOP">N&eacute;erlandais </TD>
+</TR>
+
+<TR>
+<TD WIDTH="10%" VALIGN="TOP">
+<CENTER><P>03h</P></CENTER>
+</TD>
+
+<TD WIDTH="90%" VALIGN="TOP">Allemand </TD>
+</TR>
+
+<TR>
+<TD WIDTH="10%" VALIGN="TOP">
+<CENTER><P>04h</P></CENTER>
+</TD>
+
+<TD WIDTH="90%" VALIGN="TOP">Su&eacute;dois </TD>
+</TR>
+
+<TR>
+<TD WIDTH="10%" VALIGN="TOP">
+<CENTER><P>05h</P></CENTER>
+</TD>
+
+<TD WIDTH="90%" VALIGN="TOP">Finlandais </TD>
+</TR>
+
+<TR>
+<TD WIDTH="10%" VALIGN="TOP">
+<CENTER><P>06h</P></CENTER>
+</TD>
+
+<TD WIDTH="90%" VALIGN="TOP">Espagnol </TD>
+</TR>
+
+<TR>
+<TD WIDTH="10%" VALIGN="TOP">
+<CENTER><P>07h</P></CENTER>
+</TD>
+
+<TD WIDTH="90%" VALIGN="TOP">Portugais </TD>
+</TR>
+
+<TR>
+<TD WIDTH="10%" VALIGN="TOP">
+<CENTER><P>08h</P></CENTER>
+</TD>
+
+<TD WIDTH="90%" VALIGN="TOP">Italien </TD>
+</TR>
+</TABLE>
+
+<P><I>Tableau Fig.11 : Les codes de langues pour le gestionnaire de la
+souris.</I></P>
+
+<P><A NAME="f23"></A><I><B>Fonction 23h</B> - Lecture des num&eacute;ros
+des langues </I></P>
+
+<P>Entr&eacute;es : AX = 23h </P>
+
+<DIR>
+<DIR>
+<P>BX = Langue s&eacute;lectionn&eacute;e </P>
+</DIR>
+</DIR>
+
+<P>Sortie : Aucune </P>
+
+<P>* Cette fonction d&eacute;termine la langue que le gestionnaire de souris
+utilise lorsqu'il affiche des messages ou des conseils &agrave; l'&eacute;cran.
+</P>
+
+<P>* Le code de la langue voulue tient sur un octet et est retourn&eacute;
+dans le registre BX (voir Tableau Fig.12). </P>
+
+<TABLE BORDER=1 CELLPADDING=4 WIDTH="614" BGCOLOR="#C0C0C0" BORDERCOLOR="#000000" >
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P><B>Code</B></P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">
+<CENTER><P><B>Langue</B></P></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>00h</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">Anglais </TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>01h</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">Fran&ccedil;ais </TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>02h</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">N&eacute;erlandais </TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>03h</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">Allemand </TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>04h</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">Su&eacute;dois </TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>05h</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">Finlandais </TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>06h</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">Espagnol </TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>07h</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">Portugais </TD>
+</TR>
+
+<TR>
+<TD WIDTH="16%" VALIGN="TOP">
+<CENTER><P>08h</P></CENTER>
+</TD>
+
+<TD WIDTH="84%" VALIGN="TOP">Italien </TD>
+</TR>
+</TABLE>
+
+<P><I>Tableau Fig.12 : Les codes de langues pour le gestionnaire de la
+souris.</I></P>
+
+<P><A NAME="f24"></A><I><B>Fonction 24h</B> - Obtention d'information concernant
+la configuration </I></P>
+
+<P>&nbsp;Entr&eacute;e : AX = 24h </P>
+
+<P>Sorties : BX = Version </P>
+
+<DIR>
+<DIR>
+<P>CH = Type de souris </P>
+
+<P>CL = Ligne d'interruption </P>
+</DIR>
+</DIR>
+
+<P>* Cette fonction retourne une liste de donn&eacute;es de configuration
+concernant la souris connect&eacute;e. </P>
+
+<P>* Le num&eacute;ro de version du gestionnaire de souris est repr&eacute;sent&eacute;
+par un code que contient le registre BX au retour de la fonction : BH contient
+le num&eacute;ro de version principal et BL le num&eacute;ro de version
+secondaire. </P>
+
+<P>* Le registre CH vous permet de savoir quel est le type de la souris
+connect&eacute;e, le Tableau Fig.13 pr&eacute;sente les valeurs possibles
+et les types correspondants. </P>
+
+<TABLE BORDER=1 CELLPADDING=4 WIDTH="614" BGCOLOR="#C0C0C0" BORDERCOLOR="#000000" >
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P><B>Code</B></P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">
+<CENTER><P><B>Souris</B></P></CENTER>
+</TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>01h</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Souris bus </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>02h</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Souris s&eacute;rie </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>03h</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Souris Import </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>04h</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Souris PS/2 </TD>
+</TR>
+
+<TR>
+<TD WIDTH="13%" VALIGN="TOP">
+<CENTER><P>05h</P></CENTER>
+</TD>
+
+<TD WIDTH="87%" VALIGN="TOP">Souris HP </TD>
+</TR>
+</TABLE>
+
+<P><I>Tableau Fig.13 : Les codes des types de souris.<FONT FACE="Arial"><FONT SIZE=-2>
+</FONT></FONT></I></P>
+</UL>
+</TD>
+</TR>
+</TABLE>
+
+<UL>
+<DIV ALIGN=right><P><IMG SRC="../rule8.gif" HEIGHT=9 WIDTH=499></P></DIV>
+</UL>
+
+<TABLE WIDTH="100%" >
+<TR>
+<TD ALIGN=CENTER VALIGN=TOP WIDTH="20%"></TD>
+
+<TD ALIGN=CENTER VALIGN=TOP WIDTH="80%" BGCOLOR="#BFB8F3">
+<UL>
+<P><B><U><FONT FACE="Arial">Informations sur l'auteur:</FONT></U></B></P>
+
+<P><FONT FACE="Arial">E-mail: <A HREF="mailto:altar@neuronnexion.fr">altar<FONT COLOR="#000000">@neuronnexion.fr<BR>
+</FONT></A>Page Web: <A HREF="http://www.neuronnexion.fr/~altar/main.htm">http://www.neuronnexion.fr/~altar/main.htm</A>
+</FONT></P>
+</UL>
+</TD>
+</TR>
+</TABLE>
+
+<UL>
+<P><IMG SRC="../rule6.gif" HEIGHT=9 WIDTH=499></P>
+</UL>
+
+</BODY>
+</HTML>
